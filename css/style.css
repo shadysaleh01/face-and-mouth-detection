@@ -6,7 +6,7 @@ padding: 0;
 
 /* working on all section */
 section {
-   height: 30rem;
+   height: auto;
    margin-top: 3rem;
    padding: 1rem;
    margin: 1rem;
