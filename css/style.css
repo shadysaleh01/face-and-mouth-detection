@@ -1,0 +1,38 @@
+body{
+    background-color: #D2D0D0;
+}
+.top-bar{
+    background-color: #1F0F83;
+    color: #F2FB05;
+    font-family:'Pacifico', cursive;
+    font-size: 30px;
+}
+.title-bar{
+    color: #F2FB05;
+}
+.home{
+    height: 756px;
+    width: 100%;
+}
+li a{
+    background-color: #1F0F83;
+    color: #F2FB05;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 640px){
+header{
+  margin-left: 185px;
+}
+.navList{
+margin-left: 40px;
+
+}
+ul.dropdown.menu {
+    background-color: #1F0F83
+}
+.home{
+    height: 605px;
+}
+
+}
