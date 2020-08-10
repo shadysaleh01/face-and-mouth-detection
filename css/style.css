@@ -10,6 +10,7 @@ section {
    margin-top: 3rem;
    padding: 1rem;
    margin: 1rem;
+
 }
 
 /* header */
@@ -30,13 +31,39 @@ header{
 #aboutUs {
    background-color: lightblue;
 }
-/* developers section */
-#developers {
-   background-color: hotpink;
+
+
+/* developers image */
+#grid-container img {
+   border-radius: 30rem;
+   height: 20rem;
+
 }
 
+/* #grid-container h4 {
+   text-align: center;
+} */
+
 /* footer section */
-footer {
-   height: 8rem;
+footer{
+   width: 100%;
+   height: 5rem;
    background-color: gray;
+   padding: 1.3rem;
+   position: relative;
+}
+footer p{
+   text-align: center;
+   color:black;
+   font-size: 20px;
+}
+
+#go-up{
+   font-size: 40px;
+   color: rgb(165, 3, 3);
+   position: absolute;
+   right : 40px;
+   top: 10px;
+   padding: 5px;
+   text-align: center;
 }
