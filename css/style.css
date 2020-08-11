@@ -1,7 +1,7 @@
 /* make sure there is no css style on the page */
 body {
-  margin: 0;
-  padding: 0;
+margin: 0;
+padding: 0;
 }
 
 /* working on all section */
@@ -14,211 +14,209 @@ section {
 }
 
 /* header */
-header {
-  background-color: rgb(173, 38, 38);
+header{
+   background-color: rgb(173, 38, 38);
 }
 
 /* banner section */
 #banner {
-  /* margin: center; */
-  background-color: antiquewhite;
+   /* margin: center; */
+   background-color: antiquewhite;
 }
-
+/* wal-tar section */
+#SearchItem {
+   background-color: rgb(160, 228, 211);
+ }
+ 
+ .company-name-walmart {
+   font-size: 1.5625rem;
+   padding: 20px;
+   margin-top: 0;
+   margin-bottom: 0;
+   color: #f9f9f9;
+   font-weight: 900;
+ }
+ 
+ .company-name-costco {
+   font-size: 1.5625rem;
+   padding: 20px;
+   margin-top: 0;
+   margin-bottom: 0;
+   color: #e52340;
+   font-weight: 900;
+ }
+ 
+ .costco {
+   display: inline-block;
+   vertical-align: middle;
+   max-width: 100px;
+   height: auto;
+   border-radius: 50%;
+   -ms-interpolation-mode: bicubic;
+ }
+ 
+ .walmart {
+   display: inline-block;
+   vertical-align: middle;
+   max-width: 75px;
+   height: auto;
+   border-radius: 50%;
+   -ms-interpolation-mode: bicubic;
+ }
+ 
+ .card-divider {
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-flex: 0;
+   -webkit-flex: 0 1 auto;
+   -ms-flex: 0 1 auto;
+   flex: 0 1 auto;
+   padding: 1rem;
+   background: #041363;
+ }
+ 
+ .imageItem {
+   display: inline-block;
+   vertical-align: middle;
+   max-width: 45%;
+   height: auto;
+   -ms-interpolation-mode: bicubic;
+   margin-left: 20%;
+ }
+ 
+ .accordion-content {
+   display: none;
+   padding: 1rem;
+   border: 1px solid #e6e6e6;
+   border-bottom: 0;
+   background-color: #fefefe;
+   color: #0a0a0a;
+   position: relative;
+ }
+ 
+ .infoItem {
+   font-weight: 800;
+   color: #041363;
+ }
+ 
+ .accordion-title {
+   position: relative;
+   display: block;
+   padding: 1.25rem 1rem;
+   border: 1px solid #e6e6e6;
+   border-bottom: 0;
+   font-size: 1.5rem;
+   line-height: 1;
+   color: #2ba6cb;
+ }
+ 
+ @media only screen and (max-width: 1290px) {
+   .box1 {
+     order: 2;
+   }
+   .box2 {
+     order: 1;
+   }
+   .box3 {
+     order: 3;
+   }
+ 
+   .grid-x > .small-4 {
+     width: 100%;
+   }
+ 
+   .imageItem {
+     display: inline-block;
+     vertical-align: middle;
+     max-width: 20%;
+     height: auto;
+     -ms-interpolation-mode: bicubic;
+     margin-left: 20%;
+   }
+ }
+ 
+ /* Media Rule */
+ 
+ @media only screen and (max-width: 1024px) {
+   .imageItem {
+     display: inline-block;
+     vertical-align: middle;
+     max-width: 25%;
+     height: auto;
+     -ms-interpolation-mode: bicubic;
+     margin-left: 20%;
+   }
+ }
+ 
+ @media only screen and (max-width: 860px) {
+   .imageItem {
+     display: inline-block;
+     vertical-align: middle;
+     max-width: 35%;
+     height: auto;
+     -ms-interpolation-mode: bicubic;
+     margin-left: 20%;
+   }
+ }
+ 
+ @media only screen and (max-width: 560px) {
+   .imageItem {
+     display: inline-block;
+     vertical-align: middle;
+     max-width: 50%;
+     height: auto;
+     -ms-interpolation-mode: bicubic;
+     margin-left: 20%;
+   }
+ }
+ 
+ /*----End of the Search Section----*/
 /* about us section */
 #aboutUs {
-  background-color: lightblue;
+   background-color: lightblue;
 }
 
 
-
-/* developers image */
+/* developers section image */
 #grid-container img {
    border-radius: 30rem;
    height: 20rem;
-
 }
 
-/* #grid-container h4 {
+/* customize the icon size and place */
+#grid-container i {
+   font-size: 30px;
+   margin-left: 16%;
+}
+/* write h4  in the middle */
+#grid-container h4 {
    text-align: center;
-} */
-
-/* footer section */
-
-footer{
-   width: 100%;
-   height: 5rem;
-   background-color: gray;
-   padding: 1.3rem;
-   position: relative;
 }
-footer p{
-   text-align: center;
-   color:black;
-   font-size: 20px;
+
+/* change the Github color to its original color */
+.fa-github {
+   color: black;
 }
+/* change the Linkedin icaon color to its original color */
+.fa-linkedin {
+   color:  #0e76a8;
+}
+/* change the Gmail icaon color to its original color */
+.fa-envelope {
+   color: #D44638;
+}
+
 
 #go-up{
    font-size: 40px;
-   color: rgb(165, 3, 3);
+   color:black;
    position: absolute;
    right : 40px;
-   top: 10px;
+   top: 1px;
    padding: 5px;
    text-align: center;
+
 }
-
-
-/*---Search Section---*/
-
-/* wal-tar section */
-#SearchItem {
-  background-color: rgb(160, 228, 211);
-}
-
-.company-name-walmart {
-  font-size: 1.5625rem;
-  padding: 20px;
-  margin-top: 0;
-  margin-bottom: 0;
-  color: #f9f9f9;
-  font-weight: 900;
-}
-
-.company-name-costco {
-  font-size: 1.5625rem;
-  padding: 20px;
-  margin-top: 0;
-  margin-bottom: 0;
-  color: #e52340;
-  font-weight: 900;
-}
-
-.costco {
-  display: inline-block;
-  vertical-align: middle;
-  max-width: 100px;
-  height: auto;
-  border-radius: 50%;
-  -ms-interpolation-mode: bicubic;
-}
-
-.walmart {
-  display: inline-block;
-  vertical-align: middle;
-  max-width: 75px;
-  height: auto;
-  border-radius: 50%;
-  -ms-interpolation-mode: bicubic;
-}
-
-.card-divider {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  padding: 1rem;
-  background: #041363;
-}
-
-.imageItem {
-  display: inline-block;
-  vertical-align: middle;
-  max-width: 45%;
-  height: auto;
-  -ms-interpolation-mode: bicubic;
-  margin-left: 20%;
-}
-
-.accordion-content {
-  display: none;
-  padding: 1rem;
-  border: 1px solid #e6e6e6;
-  border-bottom: 0;
-  background-color: #fefefe;
-  color: #0a0a0a;
-  position: relative;
-}
-
-.infoItem {
-  font-weight: 800;
-  color: #041363;
-}
-
-.accordion-title {
-  position: relative;
-  display: block;
-  padding: 1.25rem 1rem;
-  border: 1px solid #e6e6e6;
-  border-bottom: 0;
-  font-size: 1.5rem;
-  line-height: 1;
-  color: #2ba6cb;
-}
-
-@media only screen and (max-width: 1290px) {
-  .box1 {
-    order: 2;
-  }
-  .box2 {
-    order: 1;
-  }
-  .box3 {
-    order: 3;
-  }
-
-  .grid-x > .small-4 {
-    width: 100%;
-  }
-
-  .imageItem {
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 20%;
-    height: auto;
-    -ms-interpolation-mode: bicubic;
-    margin-left: 20%;
-  }
-}
-
-/* Media Rule */
-
-@media only screen and (max-width: 1024px) {
-  .imageItem {
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 25%;
-    height: auto;
-    -ms-interpolation-mode: bicubic;
-    margin-left: 20%;
-  }
-}
-
-@media only screen and (max-width: 860px) {
-  .imageItem {
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 35%;
-    height: auto;
-    -ms-interpolation-mode: bicubic;
-    margin-left: 20%;
-  }
-}
-
-@media only screen and (max-width: 560px) {
-  .imageItem {
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 50%;
-    height: auto;
-    -ms-interpolation-mode: bicubic;
-    margin-left: 20%;
-  }
-}
-
-/*----End of the Search Section----*/
-
 
