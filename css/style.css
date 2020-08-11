@@ -6,10 +6,10 @@ body {
 
 /* working on all section */
 section {
-  height: auto;
-  margin-top: 3rem;
-  padding: 1rem;
-  margin: 1rem;
+   height: auto;
+   margin-top: 3rem;
+   padding: 1rem;
+   margin: 1rem;
 }
 
 /* header */
@@ -34,6 +34,7 @@ header {
 
 /* footer section */
 footer {
+
   height: 8rem;
   background-color: gray;
 }
@@ -190,3 +191,4 @@ footer {
 }
 
 /*----End of the Search Section----*/
+
