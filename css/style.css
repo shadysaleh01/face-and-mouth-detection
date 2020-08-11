@@ -208,6 +208,22 @@ header{
    color: #D44638;
 }
 
+ /* footer section */
+ footer{
+   width: 100%;
+   height: 5rem;
+   background-color: gray;
+   padding: 1.3rem;
+   position: relative;
+}
+footer p{
+   text-align: center;
+   color:black;
+   font-size: 20px;
+}
+footer img {
+   height: 3rem;
+}
 
 #go-up{
    font-size: 40px;
