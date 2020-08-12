@@ -4,36 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/style.css" />
+
   </head>
 
   <body>
-    <div>
-      <!-- the header  -->
-      <header id="header">
-        <h1>Header</h1>
+    
+          <!-- the header  -->
+          <header id="header">
+            <nav>
+            <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
+              <button class="menu-icon" type="button" data-toggle></button>
+              <div class="title-bar-title">Menu</div>
+            </div>
+            
+            <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
+              <div class="top-bar-left">
+                  <span class="title-bar-title fade-in" id="logo"><img class="test" src="https://images.vexels.com/media/users/3/137617/isolated/preview/c45afb857e72b86e87baaf255f71ff37-geometric-logo-abstract-by-vexels.png"></span>
+                
+                <ul class="dropdown menu float-right " data-dropdown-menu>
+                  <li ><a href="#"><i class="fa fa-home"></i>Home</a></li>
+                  <li > <a href="#searchItem"><i class="fa fa-search"></i>Search</a></li>
+                  <li >  <a href="#aboutUs"><i class="fa fa-address-card"></i>About us</a></li>
+                  <li ><a href="#developers"><i class="fa fa-laptop"></i>Developers</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          </header>
 
-        <!-- logo -->
 
-        <head> </head>
 
-        <!-- nav bar -->
-        <nav>
-          <a href="#SearchItem">Search</a>
-          <a href="#aboutUs">About us</a>
-          <a href="#developers">Developers</a>
-        </nav>
-      </header>
 
       <!-- banner section -->
       <section id="banner">
-        <h1>Banner</h1>
-        <a href="#SearchItem">Start</a>
-      </section>
+        <div class="hero-section">
+          <div class="hero-section-text">
+            <h2 >Price Checker</h2>
+            <h5>Find the best price and save money!!</h5>  
+          </div>
+        </div>
+        <div class="mouse-scroll fade-in">
+          <a href="#searchItem">
+          <span class="scroll-icon">
+           <span class="scroll-icon__dot"></span>
+          </span>
+        </a>
+      </div>
+    </section>
 
+
+  
       <!-- search section -->
-      <section id="SearchItem">
+      <section id="searchItem">
         <div class="grid-x grid-padding-x">
           <div class="cell small-4 box1">
             <div class="docs-code-live">
@@ -108,7 +134,6 @@
                             <h6 class="infoItem">
                               Rating: &#11088; &#11088; &#11088;
                             </h6>
-
                             <h6 class="infoItem" style="display: inline;">
                               Info:
                             </h6>
@@ -249,9 +274,40 @@
       </section>
 
       <!-- developers section -->
-      <section id="developers">
-        <h1>Developers</h1>
-      </section>
+     <section class="grid-container" id="grid-container dev">
+      <div class="grid-x grid-margin-x small-up-2 medium-up-3">
+        <!-- the first card "Moe" -->
+        <div class="cell">
+          <div class="card">
+            <img src="image/Moe.PNG">
+            <div class="card-section">
+              <h4>Moe Laknahour</h4>
+              <a href="https://github.com/moelak">Github Profile</a>
+            </div>
+          </div>
+        </div>
+        <!-- the second card Shady -->
+        <div class="cell">
+          <div class="card">
+            <img src="image/pic.jpg">
+            <div class="card-section">
+              <h4>Shady Saleh</h4>
+              <a href="https://github.com/shadysaleh01">Github Profile</a>
+            </div>
+          </div>
+        </div>
+        <!-- the third card Raul -->
+        <div class="cell">
+          <div class="card">
+            <img src="image/Raul.PNG">
+            <div class="card-section">
+              <h4>Raul Oropesa</h4>
+              <a href="#">Github Profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
       <footer>
         <h1>Footer</h1>
