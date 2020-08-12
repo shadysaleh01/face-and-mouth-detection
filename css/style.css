@@ -16,15 +16,35 @@ section {
 /* header */
 header{
    background-color: rgb(173, 38, 38);
+   overflow: auto;
+
+}
+
+header h1 {
+  float: left;
+  color: rgba(236, 236, 16, 0.863);
+  background-color: white;
+  width: 10%;
+  font-family: 'Times New Roman', Times, serif;
+  margin: ;
+  padding-left: 20px;
+}
+header span {
+  color: #0e76a8;
+  font-size: 37px;
+}
+
+nav {
+  float: right;
 }
 
 /* banner section */
 #banner {
-   /* margin: center; */
    background-color: antiquewhite;
 }
-/* wal-tar section */
-#SearchItem {
+
+/*Search section */
+#searchItem {
    background-color: rgb(160, 228, 211);
  }
  
@@ -141,58 +161,91 @@ header{
  
  @media only screen and (max-width: 1024px) {
    .imageItem {
-     display: inline-block;
-     vertical-align: middle;
      max-width: 25%;
-     height: auto;
-     -ms-interpolation-mode: bicubic;
-     margin-left: 20%;
    }
  }
  
  @media only screen and (max-width: 860px) {
    .imageItem {
-     display: inline-block;
-     vertical-align: middle;
      max-width: 35%;
-     height: auto;
-     -ms-interpolation-mode: bicubic;
-     margin-left: 20%;
    }
  }
  
  @media only screen and (max-width: 560px) {
    .imageItem {
-     display: inline-block;
-     vertical-align: middle;
      max-width: 50%;
-     height: auto;
-     -ms-interpolation-mode: bicubic;
-     margin-left: 20%;
    }
  }
  
  /*----End of the Search Section----*/
-/* about us section */
+
+/*-------- about us section --------*/
 #aboutUs {
-   background-color: lightblue;
+   background-color: white;
+   overflow: auto;
+   margin: 90px;
+}
+#aboutUs h1{
+text-align: center ;
+color: rgb(170, 4, 4);
+font-family: sans-serif;
+}
+
+.imgDiv {
+  float: left;
+  width: 40%;
+  padding-left:200px;
+}
+
+#aboutUs img {
+  height: 300px;
+  
+}
+
+.pDiv {
+  float: left;
+    width: 60%;
+  
+}
+.pDiv p {
+  padding: 100px;
+  padding-right: 200px;
+  font-size: 30px;
+  margin-left: 20px;
 }
 
 
-/* developers section image */
+
+/*---------- developer section ----------- */
+
+/* developer section h1 */
+#grid-container {
+  margin-top: 20px;
+}
+#grid-container h1{
+  text-align: center;
+  font-family: serif;
+  font-size: 70px;
+  clear: both;
+}
+
+.card {
+   border: none;
+}
+
 #grid-container img {
-   border-radius: 30rem;
    height: 20rem;
+}
+
+/* developer section h4 */
+#grid-container h4 {
+  text-align: center;
 }
 
 /* customize the icon size and place */
 #grid-container i {
    font-size: 30px;
-   margin-left: 16%;
-}
-/* write h4  in the middle */
-#grid-container h4 {
-   text-align: center;
+   margin: 9%;
 }
 
 /* change the Github color to its original color */
@@ -208,7 +261,7 @@ header{
    color: #D44638;
 }
 
- /* footer section */
+ /*------------ footer section ------------*/
  footer{
    width: 100%;
    height: 5rem;
@@ -220,9 +273,6 @@ footer p{
    text-align: center;
    color:black;
    font-size: 20px;
-}
-footer img {
-   height: 3rem;
 }
 
 #go-up{
