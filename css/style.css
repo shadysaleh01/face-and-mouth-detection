@@ -20,23 +20,6 @@ header{
 
 }
 
-header h1 {
-  float: left;
-  color: rgba(236, 236, 16, 0.863);
-  background-color: white;
-  width: 10%;
-  font-family: 'Times New Roman', Times, serif;
-  margin: ;
-  padding-left: 20px;
-}
-header span {
-  color: #0e76a8;
-  font-size: 37px;
-}
-
-nav {
-  float: right;
-}
 
 /* banner section */
 #banner {
