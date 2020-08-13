@@ -1,0 +1,522 @@
+/* make sure there is no css style on the page */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* header */
+header {
+  background-color: #041363;
+}
+
+.top-bar,
+.top-bar ul {
+  background-color: #041363;
+}
+
+.menu a {
+  font-size: 18px;
+  color: #fefefe;
+  transition: color 0.5s ease;
+}
+
+.menu a:hover {
+  font-size: 18px;
+  color: #54b8d6;
+}
+#logo {
+  color: white;
+}
+.fa {
+  padding: 5px;
+}
+
+/*------logo----------- */
+.logoImage {
+  width: 175px;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* banner section */
+#banner {
+  height: 70vh;
+  margin-top: 0rem;
+  padding: 0rem;
+  margin: 0rem;
+  position: relative;
+}
+
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('https://www.the-blogsmith.com/wp-content/uploads/2018/09/social-media-image-sizes-1.png')
+      50% no-repeat;
+  background-size: cover;
+  height: 70vh;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.hero-section .hero-section-text {
+  color: #fefefe;
+  text-shadow: 1px 1px 2px #0a0a0a;
+}
+
+/* Mouse scroll button on banner */
+
+@keyframes scroll_2 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(0.75em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+.scroll-icon__dot {
+  display: block;
+  position: absolute;
+  left: 50%;
+  background: #fff;
+  height: 0.5em;
+  width: 0.5em;
+  top: 0.6em;
+  margin-left: -0.25em;
+  border-radius: 50%;
+  transform-origin: top center;
+  backface-visibility: hidden;
+  animation: scroll_2 2s ease-out infinite;
+}
+
+.scroll-icon {
+  display: block;
+  position: relative;
+  height: 3em;
+  width: 2em;
+  border: 0.25em solid #fff;
+  border-radius: 1em;
+}
+
+.page-wrap {
+  display: flex;
+  height: 100vh;
+}
+
+.mouse-scroll {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+}
+
+/*Search section */
+
+.dropbtn {
+  background-color: #4caf50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('https://www.w3schools.com/howto/searchicon.png');
+  background-position: 14px 11px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  width: 225px;
+  border-radius: 20px;
+}
+
+#myInput:focus {
+  border: 3px solid #ddd;
+  border-radius: 20px;
+  background-position: 14px 7px;
+}
+
+.inputDropdown {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 225px;
+  overflow: auto;
+  height: 250px;
+  border: 1px solid #ddd;
+  z-index: 1;
+  top: 81%;
+  border-radius: 15px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.inputDropdown a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+#searchItem {
+  background-color: rgb(243 240 239);
+  height: auto;
+  margin-top: 0rem;
+  padding: 0rem;
+  margin: 0rem;
+}
+.grid-x > .small-4 {
+  width: 50%;
+}
+
+.company-name-walmart {
+  font-size: 1.5625rem;
+  padding: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #f9f9f9;
+  font-weight: 900;
+}
+
+.company-name-costco {
+  font-size: 1.5625rem;
+  padding: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #e52340;
+  font-weight: 900;
+}
+
+.costco {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100px;
+  height: 75px;
+  border-radius: 50%;
+  -ms-interpolation-mode: bicubic;
+}
+.walmart {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  -ms-interpolation-mode: bicubic;
+}
+
+.card-divider {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  padding: 1rem;
+  background: #041363;
+}
+
+.imageItem {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 15%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+}
+
+.accordion-content {
+  display: none;
+  padding: 1rem;
+  border: 1px solid #e6e6e6;
+  border-bottom: 0;
+  background-color: #fefefe;
+  color: #0a0a0a;
+  position: relative;
+}
+
+.infoItem {
+  font-weight: 800;
+  color: #041363;
+}
+
+.accordion-title {
+  position: relative;
+  display: block;
+  padding: 1.25rem 1rem;
+  border: 1px solid #e6e6e6;
+  border-bottom: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #2ba6cb;
+}
+
+.accordion-title:hover,
+.accordion-title:focus {
+  background-color: white;
+}
+
+/*----End of the Search Section----*/
+/*-------- about us section --------*/
+#aboutUs {
+  background-color: white;
+  overflow: auto;
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 5%;
+}
+#aboutUs h1 {
+  width: 100%;
+  font-size: 60px;
+  text-align: center;
+  color: rgb(170, 4, 4);
+  font-family: serif;
+}
+.imgDiv {
+  width: 45%;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+#aboutUs img {
+  height: 150px;
+}
+#low-price {
+  margin-top: 20px;
+}
+.pDiv {
+  padding: 15px;
+  width: 55%;
+  margin-top: 40px;
+}
+.pDiv p {
+  font-size: 20px;
+}
+
+/*---------- developer section ----------- */
+
+/* developer section h1 */
+#devteam {
+  background-color: rgb(243 240 239);
+}
+#grid-container {
+  margin-top: 5%;
+}
+#grid-container h1 {
+  text-align: center;
+  font-family: serif;
+  font-size: 60px;
+  clear: both;
+  margin-bottom: 43px;
+}
+.card {
+  border: none;
+}
+#grid-container img {
+  height: 20rem;
+}
+/* developer section h4 */
+#grid-container h4 {
+  text-align: center;
+}
+/* customize the icon size and place */
+.iDiv {
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+/* change the Github color to its original color */
+.fa-github {
+  color: black;
+}
+/* change the Linkedin icaon color to its original color */
+.fa-linkedin {
+  color: #0e76a8;
+}
+/* change the Gmail icaon color to its original color */
+.fa-envelope {
+  color: #d44638;
+}
+/*------------ footer section ------------*/
+footer {
+  width: 100%;
+  height: 5rem;
+  background-color: gray;
+  padding: 1.3rem;
+  position: relative;
+}
+footer p {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
+#go-up {
+  font-size: 40px;
+  color: black;
+  position: fixed;
+  bottom: 2px;
+  right: 40px;
+  opacity: 0.2;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Media Rule */
+
+@media only screen and (max-width: 980px) {
+  #aboutUs {
+    width: 96%;
+    margin: 2%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+  }
+  .imgDiv {
+    width: 45%;
+    flex-wrap: wrap;
+  }
+  .pDiv {
+    width: 55%;
+  }
+  .imageItem {
+    max-width: 12%;
+  }
+  .grid-x > .small-4 {
+    width: 100%;
+  }
+
+  #grid-container h1 {
+    font-size: 55px;
+  }
+  #aboutUs h1 {
+    font-size: 55px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  #aboutUs {
+    width: 96%;
+    margin: 2%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+  }
+  .imgDiv {
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+  .pDiv {
+    width: 100%;
+  }
+
+  .logoImage {
+    width: 145px;
+  }
+
+  .menu a {
+    font-size: 16px;
+  }
+
+  #grid-container h1 {
+    font-size: 50px;
+  }
+  #aboutUs h1 {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 724px) {
+  .grid-margin-x.medium-up-3 > .cell {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  #aboutUs {
+    width: 96%;
+    margin: 2%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+  }
+  .imgDiv {
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+  .pDiv {
+    width: 100%;
+  }
+  .logoImage {
+    width: 145px;
+    position: relative;
+  }
+
+  .menu a {
+    font-size: 16px;
+  }
+  .fa {
+    padding: 2px;
+  }
+  .eachItem {
+    font-size: 18px;
+  }
+  #grid-container h1 {
+    font-size: 45px;
+  }
+  #aboutUs h1 {
+    font-size: 45px;
+  }
+  .grid-margin-x.medium-up-3 > .cell {
+    width: 65%;
+    margin-left: 18%;
+  }
+}
