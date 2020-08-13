@@ -13,32 +13,66 @@
 
 <body>
 
-  <!-- the header  -->
-  <header id="header">
+
+          <!-- the header  -->
+    
+          <header id="header">
+            <nav >
+            <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
+              <button class="menu-icon" type="button" data-toggle></button>
+              <div class="title-bar-title">Menu</div>
+            </div>
+            
+            <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
+              <div class="top-bar-left">
+                  <span class="title-bar-title" id="logo"><img class="logoImage" src="./image/best-price-2.png"></span>
+                
+                <ul class="dropdown menu float-right " data-dropdown-menu>
+                  <li ><a href="#"><i class="fa fa-home"></i>Home</a></li>
+                  <li > <a href="#searchItem"><i class="fa fa-search"></i>Search</a></li>
+                  <li >  <a href="#aboutUs"><i class="fa fa-address-card"></i>About us</a></li>
+                  <li ><a href="#devteam"><i class="fa fa-laptop"></i>Developers</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+ 
+          </header>
 
 
-    <!-- logo -->
 
-    <head>
-    </head>
-
-    <!-- nav bar -->
-    <nav>
-      <a href="#SearchItem">Search</a>
-      <a href="#aboutUs">About us</a>
-      <a href="#grid-container">Developers</a>
-    </nav>
-  </header>
-
-  <!-- banner section -->
-  <section id="banner">
-    <h1>Banner</h1>
-    <a href="#SearchItem">Start</a>
-  </section>
-
+      <!-- banner section -->
+      <section id="banner">
+        <div class="hero-section">
+          <div class="hero-section-text">
+            <h2 >Price Checker</h2>
+            <h5>Find the best price and save money!!</h5>  
+          </div>
+        </div>
+        <div class="mouse-scroll fade-in">
+          <a href="#searchItem">
+          <span class="scroll-icon">
+           <span class="scroll-icon__dot"></span>
+          </span>
+        </a>
+      </div>
+    </section>
 
   <!-- search section -->
   <section id="searchItem">
+    <div class="inputDropdown">
+        <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()" onclick="myFunction()">
+       <div id="myDropdown" class="dropdown-content">
+         <a href="#about">About</a>
+         <a href="#base">Base</a>
+         <a href="#blog">Blog</a>
+         <a href="#contact">Contact</a>
+         <a href="#custom">Custom</a>
+         <a href="#support">Support</a>
+         <a href="#tools">Tools</a>
+       </div>
+     </div>
+
     <div class="grid-x grid-padding-x">
       <div class="cell small-4 box1">
         <div class="docs-code-live">
@@ -55,15 +89,14 @@
               <ul class="accordion" data-accordion data-multi-expand="true">
                 <li class="accordion-item is-active" data-accordion-item>
                   <!-- Accordion tab title -->
-                  <a href="#" class="accordion-title">Title 1</a>
+                  <a href="#" class="accordion-title">
+                    <img class="imageItem"
+                    src="https://i5.walmartimages.com/asr/e8da8055-b77c-482b-a077-4f57a19b4b55_1.994fdad2653e51c272850c599b49464e.jpeg" />
+                   <span class="eachItem">HP-Laptop</span></a>
 
                   <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
                   <div class="accordion-content" data-tab-content>
                     <div class="card">
-                      <div class="card-section">
-                        <img class="imageItem"
-                          src="https://i5.walmartimages.com/asr/e8da8055-b77c-482b-a077-4f57a19b4b55_1.994fdad2653e51c272850c599b49464e.jpeg" />
-                      </div>
                       <div class="card-section">
                         <h6 class="infoItem" style="display: inline;">
                           Price:
@@ -90,15 +123,15 @@
                 <!-- ... -->
                 <li class="accordion-item is-active" data-accordion-item>
                   <!-- Accordion tab title -->
-                  <a href="#" class="accordion-title">Title 2</a>
+                  <a href="#" class="accordion-title">
+                    <img class="imageItem"
+                    src="https://i.dell.com/sites/csimages/Videos_Images/en/9eb776ec-d2b3-450c-b340-e1b5f6f31eeb.jpg" />
+                    
+                    <span class="eachItem">Samsung-Laptop</span></a>
 
                   <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
                   <div class="accordion-content" data-tab-content>
                     <div class="card">
-                      <div class="card-section">
-                        <img class="imageItem"
-                          src="https://i.dell.com/sites/csimages/Videos_Images/en/9eb776ec-d2b3-450c-b340-e1b5f6f31eeb.jpg" />
-                      </div>
                       <div class="card-section">
                         <h6 class="infoItem" style="display: inline;">
                           Price:
@@ -126,17 +159,7 @@
           </div>
         </div>
       </div>
-      <div class="cell small-4 box2">
-        <form>
-          <div class="input-group">
-            <span class="input-group-label">Product</span>
-            <input class="input-group-field" type="text" placeholder="Please insert your product" />
-            <div class="input-group-button">
-              <input type="submit" class="button" value="Search" />
-            </div>
-          </div>
-        </form>
-      </div>
+  
       <div class="cell small-4 box3">
         <div class="docs-code-live">
           <div class="card" style="width: 100%;">
@@ -146,88 +169,86 @@
                 Walmart
               </h4>
             </div>
-
             <div class="card-section">
-              <ul class="accordion" data-accordion data-allow-all-closed="true">
-                <li class="accordion-item is-active" data-accordion-item>
-                  <!-- Accordion tab title -->
-                  <a href="#" class="accordion-title">Title 1</a>
-
-                  <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
-                  <div class="accordion-content" data-tab-content>
-                    <div class="card">
-                      <div class="card-section">
-                        <img class="imageItem"
-                          src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6374/6374329_sd.jpg" />
-                      </div>
-                      <div class="card-section">
-                        <h6 class="infoItem" style="display: inline;">
-                          Price:
-                        </h6>
-                        <span>$1200</span>
-                        <h6 class="infoItem">
-                          Rating: &#11088; &#11088; &#11088; &#11088;
-                        </h6>
-
-                        <h6 class="infoItem" style="display: inline;">
-                          Info:
-                        </h6>
-
-                        <p style="display: inline;">
-                          Lorem ipsum dolor sit amet consectetur,
-                          adipisicing elit. Iste, rem, natus laborum nihil
-                          nulla eum dignissimos quos corporis officiis porro
-                          ex cumque quo ducimus dolor unde.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <!-- ... -->
-                <li class="accordion-item is-active" data-accordion-item>
-                  <!-- Accordion tab title -->
-                  <a href="#" class="accordion-title">Title 2</a>
-
-                  <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
-                  <div class="accordion-content" data-tab-content>
-                    <div class="card">
-                      <div class="card-section">
-                        <img class="imageItem"
-                          src="https://cdn.vox-cdn.com/thumbor/ibIE1eOjaZTwvHEVKzQi52itZBQ=/0x0:1578x1051/1200x800/filters:focal(663x400:915x652)/cdn.vox-cdn.com/uploads/chorus_image/image/66059801/MSI_creator_17_02_cropped.0.jpg" />
-                      </div>
-                      <div class="card-section">
-                        <h6 class="infoItem" style="display: inline;">
-                          Price:
-                        </h6>
-                        <span>$1400</span>
-                        <h6 class="infoItem">
-                          Rating: &#11088; &#11088; &#11088;
-                        </h6>
-
-                        <h6 class="infoItem" style="display: inline;">
-                          Info:
-                        </h6>
-
-                        <p style="display: inline;">
-                          Lorem ipsum dolor sit amet consectetur,
-                          adipisicing elit. Iste, rem, natus laborum nihil
-                          nulla eum dignissimos quos corporis officiis porro
-                          ex cumque quo ducimus dolor unde.
-                        </p>
+                <ul class="accordion" data-accordion data-multi-expand="true">
+                  <li class="accordion-item is-active" data-accordion-item>
+                    <!-- Accordion tab title -->
+                    <a href="#" class="accordion-title">
+                      <img class="imageItem"
+                      src="https://i5.walmartimages.com/asr/e8da8055-b77c-482b-a077-4f57a19b4b55_1.994fdad2653e51c272850c599b49464e.jpeg" />
+                     <span class="eachItem">HP-Laptop</span></a>
+  
+                    <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+                    <div class="accordion-content" data-tab-content>
+                      <div class="card">
+                        <div class="card-section">
+                          <h6 class="infoItem" style="display: inline;">
+                            Price:
+                          </h6>
+                          <span>$1160</span>
+                          <h6 class="infoItem">
+                            Rating: &#11088; &#11088; &#11088;&#11088;
+                          </h6>
+  
+                          <h6 class="infoItem" style="display: inline;">
+                            Info:
+                          </h6>
+  
+                          <p style="display: inline;">
+                            Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit. Iste, rem, natus laborum nihil
+                            nulla eum dignissimos quos corporis officiis porro
+                            ex cumque quo ducimus dolor unde.
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
+                  </li>
+                  <!-- ... -->
+                  <li class="accordion-item is-active" data-accordion-item>
+                    <!-- Accordion tab title -->
+                    <a href="#" class="accordion-title">
+                      <img class="imageItem"
+                      src="https://i.dell.com/sites/csimages/Videos_Images/en/9eb776ec-d2b3-450c-b340-e1b5f6f31eeb.jpg" />
+                      
+                      <span class="eachItem">Samsung-Laptop</span></a>
+  
+                    <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+                    <div class="accordion-content" data-tab-content>
+                      <div class="card">
+                        <div class="card-section">
+                          <h6 class="infoItem" style="display: inline;">
+                            Price:
+                          </h6>
+                          <span>$1250</span>
+                          <h6 class="infoItem">
+                            Rating: &#11088; &#11088; ;
+                          </h6>
+                          <h6 class="infoItem" style="display: inline;">
+                            Info:
+                          </h6>
+  
+                          <p style="display: inline;">
+                            Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit. Iste, rem, natus laborum nihil
+                            nulla eum dignissimos quos corporis officiis porro
+                            ex cumque quo ducimus dolor unde.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+         
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- about us section -->
-  <section id="aboutUs">
+   <!-- about us section -->
+   <section id="aboutUs">
     <h1>About Us</h1>
     <div class="imgDiv">
 
@@ -248,7 +269,8 @@
   </section>
 
   <!-- developers section -->
-  <section class="grid-container" id="grid-container">
+  <section id="devteam">
+  <div class="grid-container" id="grid-container">
     <h1> MEET THE TEAM</h1>
     <div class="grid-x grid-margin-x small-up-2 medium-up-3">
       <!-- the first card "Moe" -->
@@ -294,7 +316,8 @@
         </div>
       </div>
     </div>
-  </section>
+</div>
+</section>
 
   <footer>
     <p>Price-Right ©2020. All rights reserved</p>
@@ -308,6 +331,43 @@
   <script src="js/vendor/foundation.min.js"></script>
   <script src="js/vendor/app.js"></script>
   <script src="js/script.js"></script>
+  <script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      $("#myDropdown").toggle("show");
+    }
+    
+    function filterFunction() {
+    
+      var input, filter, ul, li, a, i;
+      input = $("#myInput");
+      filter = input.val().toUpperCase()
+      console.log(filter);
+      div = $("#myDropdown");
+      a = $("#myDropdown a");
+    
+      a.click(function() {
+      var text = $( this ).text();
+      input.val( text );
+      console.log(text);
+    });
+    
+    a.each(function( i ) {
+      txtValue = a[i].textContent || a[i].innerText;
+         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          a[i].style.display = "";
+        } else {
+          a[i].style.display = "none";
+        }
+      });
+    
+    }
+    
+    
+    
+    </script>
+    
 </body>
 
 </html>
