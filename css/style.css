@@ -432,6 +432,7 @@ footer p {
   }
   .grid-x > .small-4 {
     width: 100%;
+    flex-wrap: nowrap;
   }
 
   #grid-container h1 {
