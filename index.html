@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>AI Face Detection</title>
   <link rel="stylesheet" href="css/foundation.css" />
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -27,7 +27,7 @@
 
           <ul class="dropdown menu float-right " data-dropdown-menu>
             <li><a href="#header"><i class="fa fa-home"></i>Home</a></li>
-            <li> <a href="#searchItem"><i class="fa fa-search"></i>Search</a></li>
+            <li> <a href="#faceDetection"><i class="fa fa-search"></i>Search</a></li>
             <li> <a href="#aboutUs"><i class="fa fa-address-card"></i>About us</a></li>
             <li><a href="#developer"><i class="fa fa-laptop"></i>Developers</a></li>
           </ul>
@@ -46,7 +46,7 @@
       </div>
     </div>
     <div class="mouse-scroll fade-in">
-      <a href="#searchItem">
+      <a href="#faceDetection">
         <span class="scroll-icon">
           <span class="scroll-icon__dot"></span>
         </span>
@@ -54,12 +54,11 @@
     </div>
   </section>
   <!------------ End of banner section ------------>
-
-  <!------------ Search section -------------->
-  <section id-="searchItem">
+  <!------------ The face tedection section -------------->
+  <section id="faceDetection">
+    <video id="video" height="560" width="720" autoplay muted></video>
   </section>
-  <!------------ End of search section ----------->
-
+  <!------------ End of fase tedection section ----------->
   <!------------ About us section --------------->
   <section id="aboutUs">
     <h1>About Us</h1>
@@ -154,7 +153,10 @@
   <script src="js/vendor/what-input.js"></script>
   <script src="js/vendor/foundation.min.js"></script>
   <script src="js/vendor/app.js"></script>
+  <script src="js/scrolling.js"></script>
+  <!-- <script src="js/face-api.js"></script> -->
   <script src="js/script.js"></script>
+
 
 </body>
 
