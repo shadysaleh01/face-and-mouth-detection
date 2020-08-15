@@ -6,12 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="css/foundation.css" />
+<<<<<<< HEAD
   <script src="https://kit.fontawesome.com/a6e4d477ec.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+=======
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+>>>>>>> a0ab2954c46e21c6eb6f4f956f744b485817071c
   <link rel="stylesheet" href="css/style.css" />
 </head>
                                     <!-- added this sticky navbar -->
 <body>
+<<<<<<< HEAD
   
   <div class="sticky" data-sticky data-margin-top="0">
   <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
@@ -184,11 +190,152 @@
       <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
     </nav>
   </div>
+=======
+
+  <!----------- The header  ------------->
+  <header id="header">
+    <nav class="sticky" data-sticky data-options="marginTop:0;" style="z-index: 2;">
+      <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle></button>
+        <div class="title-bar-title">Menu</div>
+      </div>
+
+      <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
+        <div class="top-bar-left">
+          <span class="title-bar-title" id="logo"><img class="logoImage" src="./image/best-price-2.png"></span>
+
+          <ul class="dropdown menu float-right " data-dropdown-menu>
+            <li><a href="#header"><i class="fa fa-home"></i>Home</a></li>
+            <li> <a href="#searchItem"><i class="fa fa-search"></i>Search</a></li>
+            <li> <a href="#aboutUs"><i class="fa fa-address-card"></i>About us</a></li>
+            <li><a href="#developer"><i class="fa fa-laptop"></i>Developers</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!------------ End of header ----------->
+
+  <!------------ Banner section ----------->
+  <section id="banner">
+    <div class="hero-section">
+      <div class="hero-section-text">
+        <h2>Price Checker</h2>
+        <h5>Find the best price and save money!!</h5>
+      </div>
+    </div>
+    <div class="mouse-scroll fade-in">
+      <a href="#searchItem">
+        <span class="scroll-icon">
+          <span class="scroll-icon__dot"></span>
+        </span>
+      </a>
+    </div>
+  </section>
+  <!------------ End of banner section ------------>
+
+  <!------------ Search section -------------->
+  <section id-="searchItem">
+  </section>
+  <!------------ End of search section ----------->
+
+  <!------------ About us section --------------->
+  <section id="aboutUs">
+    <h1>About Us</h1>
+    <div class="imgDiv">
+
+      <img src="image/low-price.gif" alt="low price" id="low price img">
+      <img src="image/hot-deals.png" alt="hot-deals img">
+      <img src="image/best-price.png" alt="best price img" id="best-price"><br>
+
+    </div>
+    <div class="pDiv">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur animi iure dolorem dolore.
+        Quasi facere
+        voluptate sequi incidunt, omnis ipsa, aliquam dolorum sunt provident tempore mollitia beatae sapiente tempora
+        corporis? <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam officiis ab provident eos vel ad accusamus,
+        beatae expedita. Porro voluptatem quis sint omnis aut fugiat nam enim doloremque labore aspernatur.
+      </p>
+    </div>
+  </section>
+  <!------------ End of about us ------------>
+
+  <!------------ Developers section ------------>
+  <section id="developer">
+    <div class="grid-container" id="grid-container">
+      <h1> MEET THE TEAM</h1>
+      <div class="grid-x grid-margin-x small-up-2 medium-up-3">
+        <!-- The first card "Moe" -->
+        <div class="cell">
+          <div class="card">
+            <img src="image/Moe.PNG" alt="Photo of the developer Mohamed laknhour">
+            <div class="card-section">
+              <h4>Moe Laknahour</h4>
+              <div class="iDiv">
+                <a href="https://github.com/moelak" alt="Mohamed laknhour Github account"><i class="fab fa-github"
+                    href="https://github.com/moelak"></i></a>
+                <a href="https://www.linkedin.com/in/mohammad-laknahour-24279b109/"
+                  alt="Mohamed laknhour linkedin account"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:m.laknahour1990@gmail.com" alt="Send an email to Mohamed laknhour"><i
+                    class="far fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- The second card "Shady" -->
+        <div class="cell">
+          <div class="card">
+            <img src="image/Shady.jpg" alt="Photo of the developer Shady Saleh">
+            <div class="card-section">
+              <h4>Shady Saleh</h4>
+              <div class="iDiv">
+                <a href="https://github.com/shadysaleh01" alt="Shady Saleh Github account"><i
+                    class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/shady-saleh01/" alt="Shady Saleh linkedin account"><i
+                    class="fab fa-linkedin"></i></a>
+                <a href="mailto:shadysaleh01@gmail.com" alt="Send an email to Shady Saleh"></a>><i
+                  class="far fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- The third card "Raul" -->
+        <div class="cell">
+          <div class="card">
+            <img src="image/Raul.jpg" alt="Photo of the developer Raul Oropesa">
+            <div class="card-section">
+              <h4>Raul Oropesa</h4>
+              <div class="iDiv">
+                <a href="#" alt="Raul Oropesa Github account"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/raul-oropesa-ab1549172" alt="Raul Oropesa linkedin account"><i
+                    class="fab fa-linkedin"></i></a>
+                <a href="mailto:alexoropesa1982@yahoo.com" alt="Send an email to Raul Oropesa"></a>><i
+                  class="far fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!------------ End of developer section -------------->
+
+  <!------------ Footer section ------------->
+  <footer>
+    <p>Price-Right ©2020. All rights reserved</p>
+    <!----- The scroll button that on the screen ----->
+    <a href="#header" id="go-up"><i class="fas fa-arrow-alt-circle-up"></i></a>
+  </footer>
+  <!------------ End footer section ------------>
+
+>>>>>>> a0ab2954c46e21c6eb6f4f956f744b485817071c
   <script src="js/vendor/jquery.js"></script>
   <script src="js/vendor/what-input.js"></script>
   <script src="js/vendor/foundation.min.js"></script>
   <script src="js/vendor/app.js"></script>
   <script src="js/script.js"></script>
+
 </body>
 
 </html>
