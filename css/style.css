@@ -135,7 +135,9 @@ header {
   bottom: 5%;
 }
 /*------------- End of search section -------------*/
+/*------------- Search section -------------*/
 
+/*------------ End of search section ------------*/
 /*------------ About us section -----------*/
 #aboutUs {
   background-color: white;
@@ -242,7 +244,8 @@ footer p {
   color: black;
   font-size: 20px;
 }
-/* The scroll button */
+/* ----------End of footer section ----------*/
+/*---------The scroll button-----------*/
 #go-up {
   font-size: 40px;
   color: black;
@@ -253,8 +256,9 @@ footer p {
   padding: 5px;
   text-align: center;
 }
-/* ----------End of footer section ----------*/
+/* ---------End of the scroll button-----------*/
 /*---------- Media Rule ------------*/
+
 @media only screen and (max-width: 980px) {
   /* --------- Search section ----------- */
   .imageItem { 
