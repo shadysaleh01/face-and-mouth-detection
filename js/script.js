@@ -26,3 +26,18 @@ $('#banner a').on('click', function (e) {
    e.preventDefault()
 })
 
+// ajax request to joke api
+$(document).ready(function() {
+   $.ajax({
+       type: "GET",
+       url: "https://api.icndb.com/jokes/random",
+     dataType: "json",
+       success: function (msg) {
+           $("#joke").html(msg.value.joke);
+       },
+       error: function (req, status, error) {
+           alert(req + " " + status + " " + error);
+           }
+   });
+});
+
