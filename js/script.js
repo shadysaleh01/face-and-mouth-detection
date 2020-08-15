@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Select all »a« elements with a parent tag »nav« and add a function that is executed on click
 $('nav a').on('click', function (e) {
 
@@ -41,3 +42,20 @@ $(document).ready(function() {
    });
 });
 
+=======
+/*------ The face detection section-----*/
+
+/*Create video to render our webcam*/
+function startVideo() {
+  const constraints = {
+    video: true,
+  };
+  const video = document.querySelector('#video');
+  navigator.mediaDevices.getUserMedia(constraints).then(function (stream) {
+    video.srcObject = stream;
+  });
+}
+
+startVideo();
+/*------ End of the detection section-----*/
+>>>>>>> 92a6e55c31d2ce16d49233ef2cb2f4959092a357
