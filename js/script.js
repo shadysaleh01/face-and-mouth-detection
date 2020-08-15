@@ -1,5 +1,6 @@
-////////////// The face detection section ///////////////
+/*------ The face detection section-----*/
 
+/*Create video to render our webcam*/
 function startVideo() {
   const constraints = {
     video: true,
@@ -11,11 +12,4 @@ function startVideo() {
 }
 
 startVideo();
-////////////// End of the detection section ////////////////
-// const constraints = {
-//    video: true,
-//  };
-//  const video = document.querySelector('#video');
-//  navigator.mediaDevices.getUserMedia(constraints).then(stream => {
-//    video.srcObject = stream;
-//  });
+/*------ End of the detection section-----*/
