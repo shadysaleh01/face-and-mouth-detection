@@ -145,10 +145,11 @@ header {
   justify-content: center;
   align-items: center;
 }
+
 canvas {
-position: absolute;
-left: 275px;
-bottom:-170px;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
 }
 /*------------ End of Face detection section ------------*/
 /*------------ About us section -----------*/
