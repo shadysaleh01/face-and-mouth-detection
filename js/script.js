@@ -1,6 +1,7 @@
 ////////////// The face detection section ///////////////
-const video = document.getElementById("video")
+
 function startVideo() {
+   const video = document.getElementById("video")
    navigator.getUserMedia(
       { video: {} },
       stream => (video.srcObject) = stream,
