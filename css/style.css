@@ -4,7 +4,7 @@ body {
   padding: 0;
 }
 
-/* header */
+/*------------- header -------------*/
 header {
   background-color: #041363;
 }
@@ -24,14 +24,16 @@ header {
   font-size: 18px;
   color: #54b8d6;
 }
+
 #logo {
   color: white;
 }
+
 .fa {
   padding: 5px;
 }
 
-/*------logo----------- */
+/*-----logo----- */
 .logoImage {
   width: 175px;
   z-index: 1;
@@ -39,8 +41,9 @@ header {
   left: 0;
   top: 0;
 }
+/* -----------End of header ------------- */
 
-/* banner section */
+/*------------ banner section ---------------*/
 #banner {
   height: 70vh;
   margin-top: 0rem;
@@ -131,175 +134,11 @@ header {
   left: 50%;
   bottom: 5%;
 }
+/*------------- End of search section -------------*/
+/*------------- Search section -------------*/
 
-/*Search section */
-
-.dropbtn {
-  background-color: #4caf50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropbtn:hover,
-.dropbtn:focus {
-  background-color: #3e8e41;
-}
-
-#myInput {
-  box-sizing: border-box;
-  background-image: url('https://www.w3schools.com/howto/searchicon.png');
-  background-position: 14px 11px;
-  background-repeat: no-repeat;
-  font-size: 16px;
-  padding: 14px 20px 12px 45px;
-  border: none;
-  width: 263px;
-  height: 44px;
-  border-radius: 20px;
-}
-
-#myInput:focus {
-  border: 3px solid #ddd;
-  border-radius: 20px;
-  background-position: 14px 7px;
-}
-
-.inputDropdown {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  padding-top: 20px;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f6f6f6;
-  min-width: 254px;
-  overflow: auto;
-  height: 240px;
-  border: 1px solid #ddd;
-  z-index: 1;
-  top: 84%;
-  border-radius: 15px;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.inputDropdown a:hover {
-  background-color: #ddd;
-}
-
-.show {
-  display: block;
-}
-
-#searchItem {
-  background-color: rgb(243 240 239);
-  height: auto;
-  margin-top: 0rem;
-  padding: 0rem;
-  margin: 0rem;
-}
-.grid-x > .small-4 {
-  width: 50%;
-}
-
-.company-name-walmart {
-  font-size: 1.5625rem;
-  padding: 20px;
-  margin-top: 0;
-  margin-bottom: 0;
-  color: #f9f9f9;
-  font-weight: 900;
-}
-
-.company-name-costco {
-  font-size: 1.5625rem;
-  padding: 20px;
-  margin-top: 0;
-  margin-bottom: 0;
-  color: #e52340;
-  font-weight: 900;
-}
-
-.costco {
-  display: inline-block;
-  vertical-align: middle;
-  max-width: 100px;
-  height: 75px;
-  border-radius: 50%;
-  -ms-interpolation-mode: bicubic;
-}
-.walmart {
-  display: inline-block;
-  vertical-align: middle;
-  max-width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  -ms-interpolation-mode: bicubic;
-}
-
-.card-divider {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  padding: 1rem;
-  background: #041363;
-}
-
-.imageItem {
-  display: inline-block;
-  vertical-align: middle;
-  max-width: 15%;
-  height: auto;
-  -ms-interpolation-mode: bicubic;
-}
-
-.accordion-content {
-  display: none;
-  padding: 1rem;
-  border: 1px solid #e6e6e6;
-  border-bottom: 0;
-  background-color: #fefefe;
-  color: #0a0a0a;
-  position: relative;
-}
-
-.infoItem {
-  font-weight: 800;
-  color: #041363;
-}
-
-.accordion-title {
-  position: relative;
-  display: block;
-  padding: 1.25rem 1rem;
-  border: 1px solid #e6e6e6;
-  border-bottom: 0;
-  font-size: 1.5rem;
-  line-height: 1;
-  color: #2ba6cb;
-}
-
-.accordion-title:hover,
-.accordion-title:focus {
-  background-color: white;
-}
-/*-------- about us section --------*/
+/*------------ End of search section ------------*/
+/*------------ About us section -----------*/
 #aboutUs {
   background-color: white;
   overflow: auto;
@@ -310,6 +149,7 @@ header {
   margin: auto;
   margin-top: 5%;
 }
+
 #aboutUs h1 {
   width: 100%;
   font-size: 60px;
@@ -317,6 +157,7 @@ header {
   color: rgb(170, 4, 4);
   font-family: serif;
 }
+/*  The div that hold the images */
 .imgDiv {
   width: 45%;
   padding: 15px;
@@ -325,30 +166,31 @@ header {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
 #aboutUs img {
   height: 150px;
 }
+/* The lowest price img */
 #low-price {
   margin-top: 20px;
 }
+/* The div that hold P */
 .pDiv {
   padding: 15px;
   width: 55%;
   margin-top: 40px;
 }
+/* The actual p */
 .pDiv p {
   font-size: 20px;
 }
-
-/*---------- developer section ----------- */
-
-/* developer section h1 */
-#devteam {
+/*------------- End of about us section -------------*/
+/*------------- Developer section ------------- */
+#developer {
   background-color: rgb(243 240 239);
+  padding-top: 5%;
 }
-#grid-container {
-  margin-top: 5%;
-}
+
 #grid-container h1 {
   text-align: center;
   font-family: serif;
@@ -356,12 +198,15 @@ header {
   clear: both;
   margin-bottom: 43px;
 }
+/* Taking off the border */
 .card {
   border: none;
 }
+/* Making all images have the same size */
 #grid-container img {
   height: 20rem;
 }
+
 /* developer section h4 */
 #grid-container h4 {
   text-align: center;
@@ -385,7 +230,8 @@ header {
 .fa-envelope {
   color: #d44638;
 }
-/*------------ footer section ------------*/
+/*-------------- End of developer section ------------*/
+/*-------------- Footer section --------------*/
 footer {
   width: 100%;
   height: 5rem;
@@ -398,6 +244,8 @@ footer p {
   color: black;
   font-size: 20px;
 }
+/* ----------End of footer section ----------*/
+/*---------The scroll button-----------*/
 #go-up {
   font-size: 40px;
   color: black;
@@ -408,16 +256,28 @@ footer p {
   padding: 5px;
   text-align: center;
 }
-
-/* Media Rule */
+/* ---------End of the scroll button-----------*/
+/*---------- Media Rule ------------*/
 
 @media only screen and (max-width: 980px) {
+  /* --------- Search section ----------- */
+  .imageItem { 
+    max-width: 12%;
+  }
+  .grid-x > .small-4 {
+    width: 100%;
+  }
+  /* ------------ End dearch section ----------- */
+  /* ---------About us section----------- */
   #aboutUs {
     width: 96%;
     margin: 2%;
     margin-top: 5%;
     display: flex;
     flex-direction: row;
+  }
+  #aboutUs h1 {
+    font-size: 55px;
   }
   .imgDiv {
     width: 45%;
@@ -426,28 +286,36 @@ footer p {
   .pDiv {
     width: 55%;
   }
-  .imageItem {
-    max-width: 12%;
-  }
-  .grid-x > .small-4 {
-    width: 100%;
-  }
-
+  /* ----------End of about us section----------- */
+  /* ----------Developer section---------- */
   #grid-container h1 {
     font-size: 55px;
   }
-  #aboutUs h1 {
-    font-size: 55px;
-  }
+  /*----------End of Developer section---------- */
 }
 
 @media only screen and (max-width: 760px) {
+  /* --------- Search section ----------- */
+  .logoImage {
+    width: 145px;
+  }
+  .menu a {
+    font-size: 16px;
+  }
+  #grid-container h1 {
+    font-size: 50px;
+  }
+  /* ------------ End search section ----------- */
+  /* ---------About us section----------- */
   #aboutUs {
     width: 96%;
     margin: 2%;
     margin-top: 5%;
     display: flex;
     flex-direction: row;
+  }
+  #aboutUs h1 {
+    font-size: 50px;
   }
   .imgDiv {
     width: 100%;
@@ -456,36 +324,63 @@ footer p {
   .pDiv {
     width: 100%;
   }
-
-  .logoImage {
-    width: 145px;
-  }
-
-  .menu a {
-    font-size: 16px;
-  }
-
+  /* ----------End of about us section----------- */
+  /* ----------Developer section---------- */
   #grid-container h1 {
     font-size: 50px;
   }
-  #aboutUs h1 {
+  /*----------End of Developer section---------- */
+  /* --------- Search section ----------- */
+  .logoImage {
+    width: 145px;
+  }
+  .menu a {
+    font-size: 16px;
+  }
+  #grid-container h1 {
     font-size: 50px;
   }
+  /* ------------ End search section ----------- */
 }
 
 @media only screen and (max-width: 724px) {
+  /* --------- Developer section ----------- */
   .grid-margin-x.medium-up-3 > .cell {
     width: 45%;
   }
+  /* --------- End developer section---------- */
 }
 
 @media only screen and (max-width: 640px) {
+  /* --------- Search section ----------- */
+    .logoImage {
+      width: 145px;
+      position: relative;
+    }
+    .menu a {
+      font-size: 16px;
+    }
+    .fa {
+      padding: 2px;
+    }
+    .eachItem {
+      font-size: 18px;
+    }
+    .grid-margin-x.medium-up-3 > .cell {
+      width: 65%;
+      margin-left: 18%;
+    }
+  /* ------------ End search section ----------- */
+  /*--------About us section-------- */
   #aboutUs {
     width: 96%;
     margin: 2%;
     margin-top: 5%;
     display: flex;
     flex-direction: row;
+  }
+  #aboutUs h1 {
+    font-size: 45px;
   }
   .imgDiv {
     width: 100%;
@@ -494,28 +389,10 @@ footer p {
   .pDiv {
     width: 100%;
   }
-  .logoImage {
-    width: 145px;
-    position: relative;
-  }
-
-  .menu a {
-    font-size: 16px;
-  }
-  .fa {
-    padding: 2px;
-  }
-  .eachItem {
-    font-size: 18px;
-  }
+  /* ---------End of about us section---------*/
+  /* ---------Developer section---------- */
   #grid-container h1 {
     font-size: 45px;
   }
-  #aboutUs h1 {
-    font-size: 45px;
-  }
-  .grid-margin-x.medium-up-3 > .cell {
-    width: 65%;
-    margin-left: 18%;
-  }
+  /* --------End of developer section--------- */
 }
