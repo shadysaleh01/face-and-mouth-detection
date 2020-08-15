@@ -5,9 +5,8 @@ function startVideo() {
     video: true,
   };
   const video = document.querySelector('#video');
-  navigator.mediaDevices.getUserMedia(constraints).then(function (stream, err) {
+  navigator.mediaDevices.getUserMedia(constraints).then(function (stream) {
     video.srcObject = stream;
-    console.log(err);
   });
 }
 
