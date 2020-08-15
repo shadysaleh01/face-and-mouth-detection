@@ -1,14 +1,17 @@
 ////////////// The face detection section ///////////////
 
 function startVideo() {
-   const video = document.getElementById("video")
-   navigator.getUserMedia(
-      { video: {} },
-      stream => (video.srcObject) = stream,
-      err => console.error(err)
-   )
+  const constraints = {
+    video: true,
+  };
+  const video = document.querySelector('#video');
+  navigator.mediaDevices.getUserMedia(constraints).then(function (stream, err) {
+    video.srcObject = stream;
+    console.log(err);
+  });
 }
-startVideo()
+
+startVideo();
 ////////////// End of the detection section ////////////////
 // const constraints = {
 //    video: true,
