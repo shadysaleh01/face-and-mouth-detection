@@ -145,6 +145,12 @@ header {
   justify-content: center;
   align-items: center;
 }
+
+canvas {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
 /*------------ End of Face detection section ------------*/
 /*------------ About us section -----------*/
 #aboutUs {
