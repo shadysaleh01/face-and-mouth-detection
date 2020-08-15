@@ -135,9 +135,17 @@ header {
   bottom: 5%;
 }
 /*------------- End of search section -------------*/
-/*------------- Search section -------------*/
-
-/*------------ End of search section ------------*/
+/*------------- Face detection section -------------*/
+#faceDetection {
+  background-color: rgb(243 240 239);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*------------ End of Face detection section ------------*/
 /*------------ About us section -----------*/
 #aboutUs {
   background-color: white;
