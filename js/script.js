@@ -21,10 +21,10 @@ function startVideo() {
    )
 }
 
-let setVal;
-
+var canvas
+var setVal;
 startBtn.addEventListener('click', () => {
-   const canvas = faceapi.createCanvasFromMedia(video)
+   canvas = faceapi.createCanvasFromMedia(video)
    document.querySelector("#faceDetection").appendChild(canvas)
    const displaySize = { width: video.width, height: video.height }
    setVal = setInterval(async () => {
@@ -37,10 +37,10 @@ startBtn.addEventListener('click', () => {
       faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)
       faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
    }, 100)
-
-   pauseBtn.addEventListener('click', function () {
-      clearInterval(setVal)
-   })
-
+})
+pauseBtn.addEventListener('click', function () {
+   clearInterval(setVal)
+   canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height)
+})
 
 ////////////// End of the detection section ////////////////
