@@ -2,6 +2,8 @@
 
 
 const video = document.querySelector("#video")
+const startBtn = document.querySelector("#startBtn")
+const pauseBtn = document.querySelector("#pauseBtn")
 
 Promise.all([
    faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
@@ -19,12 +21,13 @@ function startVideo() {
    )
 }
 
+let setVal;
 
-video.addEventListener('play', () => {
+startBtn.addEventListener('click', () => {
    const canvas = faceapi.createCanvasFromMedia(video)
    document.querySelector("#faceDetection").appendChild(canvas)
    const displaySize = { width: video.width, height: video.height }
-   setInterval(async () => {
+   setVal = setInterval(async () => {
       const detections = await faceapi.detectAllFaces(video, new
          faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions()
       console.log(detections)
@@ -34,6 +37,10 @@ video.addEventListener('play', () => {
       faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)
       faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
    }, 100)
-})
+
+   pauseBtn.addEventListener('click', function () {
+      clearInterval(setVal)
+   })
+
 
 ////////////// End of the detection section ////////////////

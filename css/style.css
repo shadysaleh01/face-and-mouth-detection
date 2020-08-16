@@ -145,7 +145,23 @@ header {
   justify-content: center;
   align-items: center;
 }
-
+#startBtn {
+  background-color: rgb(104, 204, 3);
+  margin-right: 20px;
+  padding: 10px 20px;
+  font-size: 30px;
+  border-radius: 10px;
+  color: #fff;
+  width: 130px;
+}
+#pauseBtn {
+  background-color: rgba(189, 5, 5, 0.808);
+  margin-left: 20px;
+  padding: 10px 20px;
+  font-size: 30px;
+  border-radius: 10px;
+  color: #fff;
+}
 canvas {
   position: absolute;
   justify-content: center;
