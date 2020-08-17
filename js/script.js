@@ -47,6 +47,7 @@ pauseBtn.addEventListener('click', function () {
 
 ////////////// End of the detection section ///////////////
 
+/*----------- Added joke-api and ajax call------------*/
 var settings = {
    "async": true,
    "crossDomain": true,
@@ -64,7 +65,7 @@ var settings = {
     var answers= response.punchline;
     console.log(answers);
 
-    //appned the answer var adn question var in to the each elemnts on html.
+/*----- appended the question and answer to the <p> tags in the model section-----*/
 $(".question").append(questions)
 $(".answer").append(answers)
  });
