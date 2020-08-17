@@ -9,30 +9,12 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.css" />
-  <title>jQuery UI Dialog - Default functionality</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
- 
 
  
   </head>
 
 <body>
-<!-- Trigger/Open The Modal -->
-<button id="myBtn" class="btn btn-primary">Open Modal</button>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
   
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
-  </div>
-
-</div>
-<!-- End of Modal -->
-
   <!----------- The header  ------------->
   <header id="header">
     <nav class="sticky" data-sticky data-options="marginTop:0;" style="z-index: 2;">
@@ -75,6 +57,20 @@
     </div>
   </section>
   <!------------ End of banner section ------------>
+
+  <!------------ model start ------------>
+<p><button class="button" data-toggle="animatedModal10">Click me for a modal</button></p>
+
+<div class="reveal" id="animatedModal10" data-reveal data-close-on-click="true" data-animation-in="spin-in" data-animation-out="spin-out">
+    <p class="lead question"></p>
+    <p class="lead answer"></p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<!------------ model end ------------>
+
   <!------------ The face tedection section -------------->
   <section id="faceDetection">
     <button id="startBtn">Play</button>
@@ -90,16 +86,18 @@
 
       <img src="image/low-price.gif" alt="low price" id="low price img">
       <img src="image/hot-deals.png" alt="hot-deals img">
-      <img src="image/best-price.png" alt="best price img" id="best-price"><br>
+      <img src="image/best-price.png" alt="best price img" id="best-price">
 
     </div>
     <div class="pDiv">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur animi iure dolorem dolore.
-        Quasi facere
-        voluptate sequi incidunt, omnis ipsa, aliquam dolorum sunt provident tempore mollitia beatae sapiente tempora
-        corporis? <br>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam officiis ab provident eos vel ad accusamus,
-        beatae expedita. Porro voluptatem quis sint omnis aut fugiat nam enim doloremque labore aspernatur.
+      <p>We are working on face recongnition so it can recognize facial expressions, and also try to determine the age, and gender of the
+        the User being streamed on the website. Depending on the Users facial expressions giphy's will be rendered 
+        suitable to the current expression.
+      </p>
+      <br>
+      <p>
+        In this project we used a face recognition API(face-api.js), giphy-api, javaScript, jQuery, HTML, CSS and foundation markup. Some of our backrounds include 
+        Computer Science and beginner development with the goal of expanding our knowledge within the realm of Full Stack Development.
       </p>
     </div>
   </section>

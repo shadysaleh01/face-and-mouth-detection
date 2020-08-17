@@ -23,36 +23,6 @@ function startVideo() {
 
 startVideo();
 /*------ End of the detection section-----*/
-
-
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-video.addEventListener('play', () => {
-   const canvas = faceapi.createCanvasFromMedia(video)
 var canvas;
 var setVal;
 startBtn.addEventListener('click', () => {
@@ -77,3 +47,24 @@ pauseBtn.addEventListener('click', function () {
 
 ////////////// End of the detection section ///////////////
 
+var settings = {
+   "async": true,
+   "crossDomain": true,
+   "url": "https://dad-jokes.p.rapidapi.com/random/jokes",
+   "method": "GET",
+   "headers": {
+     "x-rapidapi-host": "dad-jokes.p.rapidapi.com",
+     "x-rapidapi-key": "02155f308amsh0a960e0a1ff50bap185b16jsn1abe372cf955"
+   }
+ }
+ $.ajax(settings).then(function (response) {
+   console.log(response);
+   var questions= response.setup;
+    console.log(questions);
+    var answers= response.punchline;
+    console.log(answers);
+
+    //appned the answer var adn question var in to the each elemnts on html.
+$(".question").append(questions)
+$(".answer").append(answers)
+ });
