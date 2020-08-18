@@ -56,7 +56,7 @@ header {
 
 .hero-section {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('https://www.the-blogsmith.com/wp-content/uploads/2018/09/social-media-image-sizes-1.png')
+    url('../image/face-recognition.jpg')
       50% no-repeat;
   background-size: cover;
   height: 70vh;
