@@ -146,23 +146,74 @@ header {
   align-items: center;
 }
 
- #startBtn {
-  background-color: rgb(104, 204, 3);
-  margin-right: 20px;
-  padding: 10px 20px;
-  font-size: 30px;
-  border-radius: 10px;
-  color: #fff;
-  width: 130px;
+#btns-video{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#videoDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#btnsDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
 }
 #pauseBtn {
-  background-color: rgba(189, 5, 5, 0.808);
+  color: rgb(185, 7, 7);
+  font-size: 50px;
   margin-left: 20px;
-  padding: 10px 20px;
-  font-size: 30px;
-  border-radius: 10px;
-  color: #fff;
 } 
+
+#startBtn {
+  color: green;
+  font-size: 50px;
+  margin-right: 20px;
+}
+
+#table {
+  width: 400px;
+  height: 400px;
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+  margin-right: 1%;
+  border: 2px gray solid;
+  line-height: 0;
+}
+#table th {
+  font-family: serif;
+  font-size: 35px;
+}
+
+#msgDiv {
+  background-color: #fff;
+  /* max-width:350px;
+  min-width: 350px; */
+  width: 420px;
+  height: 400px;
+  text-align: center;
+  margin-left: 1%;
+  margin-bottom: 20px;
+  border: 1px gray solid;
+}
+#msgDiv h2 {
+  font-size: 45px;
+  font-family: serif;
+  padding: 0;
+  margin: 0;
+}
+hr {
+  margin: 0;
+}
+#msgDiv p {
+  padding: 13px;
+}
 
 canvas {
   position: absolute;
@@ -181,6 +232,7 @@ canvas {
   flex-wrap: wrap;
   margin: auto;
   margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 #aboutUs h1 {
@@ -201,7 +253,7 @@ canvas {
 }
 
 #aboutUs img {
-  height: 150px;
+  height: 400px;
 }
 /* The lowest price img */
 #low-price {
@@ -291,8 +343,37 @@ footer p {
 }
 /* ---------End of the scroll button-----------*/
 /*---------- Media Rule ------------*/
+@media only screen and (max-width: 1350px) {
+    /* --------- Face detectionb section ----------- */
+    #faceDetection {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    #btns-video {
+      width: 100%;
+    }
+    #btns-div {
+      width: 100%;
+    }
+    #table {
+      order: 2;
+      width: 47%;
+      height: 200px;
+      margin: 0;
+      margin-bottom: 20px;
+  
+    }
+    #msgDiv {
+      width: 47%;
+      height: 200px;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+    /* --------- End of face detection section -----------*/
+}
 
 @media only screen and (max-width: 980px) {
+
   /* --------- Search section ----------- */
   .imageItem { 
     max-width: 12%;
@@ -328,7 +409,20 @@ footer p {
 }
 
 @media only screen and (max-width: 760px) {
-  /* --------- Search section ----------- */
+  /* ------------ Face detection section ------------*/
+  #msgDiv {
+    width: 90%;
+    height: 200px;
+    margin-bottom: 1%;
+  }
+  #table {
+    order: 2;
+    width: 90%;
+    height: 200px;
+    font-size: 20px;
+  }
+  /* ------------ End of face detection section ------------ */
+  /* ------------ Search section ------------ */
   .logoImage {
     width: 145px;
   }
@@ -338,8 +432,8 @@ footer p {
   #grid-container h1 {
     font-size: 50px;
   }
-  /* ------------ End search section ----------- */
-  /* ---------About us section----------- */
+  /* ------------- End search section ----------- */
+  /* -------------About us section------------- */
   #aboutUs {
     width: 96%;
     margin: 2%;
@@ -352,7 +446,6 @@ footer p {
   }
   .imgDiv {
     width: 100%;
-    flex-wrap: nowrap;
   }
   .pDiv {
     width: 100%;
