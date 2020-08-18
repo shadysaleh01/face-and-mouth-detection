@@ -350,6 +350,9 @@ i.fas.fa-microphone-alt-slash.silent {
 
 /*------------ End of Mouth detection section ------------*/
 /*------------ About us section -----------*/
+section.aboutUs {
+  background-color: rgb(243 240 239);
+}
 #aboutUs {
   background-color: rgb(243 240 239);
   overflow: auto;
