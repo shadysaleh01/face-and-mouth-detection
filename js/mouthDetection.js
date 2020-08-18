@@ -1,4 +1,4 @@
-////////////// The face detection section ///////////////
+/*------- The mouth detection section -------*/
 
 const video2 = document.querySelector('#video2');
 
@@ -92,27 +92,4 @@ video2.addEventListener('play', () => {
   }
 });
 
-////////////// End of the detection section ////////////////
-
-/*----------- Added joke-api and ajax call------------*/
-var settings = {
-  async: true,
-  crossDomain: true,
-  url: 'https://dad-jokes.p.rapidapi.com/random/jokes',
-  method: 'GET',
-  headers: {
-    'x-rapidapi-host': 'dad-jokes.p.rapidapi.com',
-    'x-rapidapi-key': '02155f308amsh0a960e0a1ff50bap185b16jsn1abe372cf955',
-  },
-};
-$.ajax(settings).then(function (response) {
-  console.log(response);
-  var questions = response.setup;
-  console.log(questions);
-  var answers = response.punchline;
-  console.log(answers);
-
-  /*----- appended the question and answer to the <p> tags in the model section-----*/
-  $('.question').append(questions);
-  $('.answer').append(answers);
-});
+/*------- End of the mouth detection section -------*/
