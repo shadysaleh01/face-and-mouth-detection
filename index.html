@@ -1,163 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Face Detection</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Face Detection</title>
-  <link rel="stylesheet" href="css/foundation.css" />
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+  <body>
+    <!----------- The header  ------------->
+    <header id="header">
+      <nav
+        class="sticky"
+        data-sticky
+        data-options="marginTop:0;"
+        style="z-index: 2;"
+      >
+        <div
+          class="title-bar"
+          data-responsive-toggle="example-animated-menu"
+          data-hide-for="medium"
+        >
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
 
-<body>
+        <div
+          class="top-bar"
+          id="example-animated-menu"
+          data-animate="hinge-in-from-top spin-out"
+        >
+          <div class="top-bar-left">
+            <span class="title-bar-title" id="logo"
+              ><img class="logoImage" src="./image/best-price-2.png"
+            /></span>
 
-  <!----------- The header  ------------->
-  <header id="header">
-    <nav class="sticky" data-sticky data-options="marginTop:0;" style="z-index: 2;">
-      <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
-        <button class="menu-icon" type="button" data-toggle></button>
-        <div class="title-bar-title">Menu</div>
-      </div>
+            <ul class="dropdown menu float-right" data-dropdown-menu>
+              <li>
+                <a href="#header"><i class="fa fa-home"></i>Home</a>
+              </li>
+              <li>
+                <a href="#faceDetection"><i class="fa fa-search"></i>Search</a>
+              </li>
+              <li>
+                <a href="#aboutUs"
+                  ><i class="fa fa-address-card"></i>About us</a
+                >
+              </li>
+              <li>
+                <a href="#developer"><i class="fa fa-laptop"></i>Developers</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!------------ End of header ----------->
 
-      <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
-        <div class="top-bar-left">
-          <span class="title-bar-title" id="logo"><img class="logoImage" src="./image/best-price-2.png"></span>
-
-          <ul class="dropdown menu float-right " data-dropdown-menu>
-            <li><a href="#header"><i class="fa fa-home"></i>Home</a></li>
-            <li> <a href="#faceDetection"><i class="fa fa-search"></i>Search</a></li>
-            <li> <a href="#aboutUs"><i class="fa fa-address-card"></i>About us</a></li>
-            <li><a href="#developer"><i class="fa fa-laptop"></i>Developers</a></li>
-          </ul>
+    <!------------ Banner section ----------->
+    <section id="banner">
+      <div class="hero-section">
+        <div class="hero-section-text">
+          <h2>Price Checker</h2>
+          <h5>Find the best price and save money!!</h5>
         </div>
       </div>
-    </nav>
-  </header>
-  <!------------ End of header ----------->
-
-  <!------------ Banner section ----------->
-  <section id="banner">
-    <div class="hero-section">
-      <div class="hero-section-text">
-        <h2>Price Checker</h2>
-        <h5>Find the best price and save money!!</h5>
+      <div class="mouse-scroll fade-in">
+        <a href="#faceDetection">
+          <span class="scroll-icon">
+            <span class="scroll-icon__dot"></span>
+          </span>
+        </a>
       </div>
-    </div>
-    <div class="mouse-scroll fade-in">
-      <a href="#faceDetection">
-        <span class="scroll-icon">
-          <span class="scroll-icon__dot"></span>
-        </span>
-      </a>
-    </div>
-  </section>
-  <!------------ End of banner section ------------>
-  <!------------ The face tedection section -------------->
-  <section id="faceDetection">
-    <video id="video" height="560" width="720" autoplay muted></video>
-  </section>
-  <!------------ End of fase tedection section ----------->
-  <!------------ About us section --------------->
-  <section id="aboutUs">
-    <h1>About Us</h1>
-    <div class="imgDiv">
+    </section>
+    <!------------ End of banner section ------------>
 
-      <img src="image/low-price.gif" alt="low price" id="low price img">
-      <img src="image/hot-deals.png" alt="hot-deals img">
-      <img src="image/best-price.png" alt="best price img" id="best-price"><br>
-
-    </div>
-    <div class="pDiv">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur animi iure dolorem dolore.
-        Quasi facere
-        voluptate sequi incidunt, omnis ipsa, aliquam dolorum sunt provident tempore mollitia beatae sapiente tempora
-        corporis? <br>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam officiis ab provident eos vel ad accusamus,
-        beatae expedita. Porro voluptatem quis sint omnis aut fugiat nam enim doloremque labore aspernatur.
+    <!------------ model start ------------>
+    <section id="model">
+      <p>
+        <button class="button" data-toggle="animatedModal10">
+          Click me for a modal
+        </button>
       </p>
+      <div
+        class="reveal"
+        id="animatedModal10"
+        data-reveal
+        data-close-on-click="true"
+        data-animation-in="spin-in"
+        data-animation-out="spin-out"
+      >
+        <p class="lead question"></p>
+        <p class="lead answer"></p>
+        <button
+          class="close-button"
+          data-close
+          aria-label="Close reveal"
+          type="button"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </section>
+    <!------------ model end ------------>
+    <!------------ The face tedection section -------------->
+    <section id="faceDetection">
+      <table id="table">
+        <tr>
+          <th>Anything</th>
+          <th>Anything</th>
+        </tr>
+        <tr>
+          <td>Gender:</td>
+          <td>Male/Female</td>
+        </tr>
+        <tr>
+          <td>Age:</td>
+          <td>Your age</td>
+        </tr>
+        <tr>
+          <td>Esle:</td>
+          <td>Esle</td>
+        </tr>
+      </table>
+      <div id="btns-video">
+        <div id="videoDiv">
+          <video id="video" width="600" height="500" autoplay muted></video>
+        </div>
+        <div id="btnsDiv">
+          <i id="startBtn" class="fas fa-play-circle"></i>
+          <i id="pauseBtn" class="fas fa-pause-circle"></i>
+        </div>
+      </div>
+      <div id="msgDiv">
+        <h2>Your Feeling</h2>
+        <hr />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tenetur
+          quam assumenda consequatur asperiores vero repudiandae consequuntur et
+          qui nulla alias eos eum, ipsum optio soluta corporis commodi molestias
+          iusto.
+        </p>
+      </div>
+    </section>
+    <!------------ End of fase tedection section ----------->
+    <!------------ The face tedection section -------------->
+    <section id="mouthDetection">
+      <div id="btns-video">
+        <div id="videoDiv">
+          <video id="video2" width="600" height="500" autoplay muted></video>
+          <div class="mice-icon">
+            <i
+              class="fas fa-microphone-alt talking"
+              style="color: red; display: none;"
+            ></i>
+            <i
+              class="fas fa-microphone-alt-slash silent"
+              style="color: red; display: none;"
+            ></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="btnsDiv">
+      <i id="startBtn2" class="fas fa-play-circle"></i>
+      <i id="pauseBtn2" class="fas fa-pause-circle"></i>
     </div>
-  </section>
-  <!------------ End of about us ------------>
+    <!------------ End of fase tedection section ----------->
+    <!------------ About us section --------------->
+    <section id="aboutUs">
+      <h1>About Us</h1>
+      <div class="imgDiv">
+        <img
+          src="image/emotions.jpg"
+          alt="best price img"
+          id="best-price"
+        /><br />
+      </div>
+      <div class="pDiv">
+        <p>
+          We are working on face recongnition so it can recognize facial
+          expressions, and also try to determine the age, and gender of the the
+          User being streamed on the website. Depending on the Users facial
+          expressions giphy's will be rendered suitable to the current
+          expression.
+        </p>
+        <br />
+        <p>
+          In this project we used a face recognition API(face-api.js),
+          giphy-api, javaScript, jQuery, HTML, CSS and foundation markup. Some
+          of our backrounds include Computer Science and beginner development
+          with the goal of expanding our knowledge within the realm of Full
+          Stack Development.
+        </p>
+      </div>
+    </section>
+    <!------------ End of about us ------------>
 
-  <!------------ Developers section ------------>
-  <section id="developer">
-    <div class="grid-container" id="grid-container">
-      <h1> MEET THE TEAM</h1>
-      <div class="grid-x grid-margin-x small-up-2 medium-up-3">
-        <!-- The first card "Moe" -->
-        <div class="cell">
-          <div class="card">
-            <img src="image/Moe.PNG" alt="Photo of the developer Mohamed laknhour">
-            <div class="card-section">
-              <h4>Moe Laknahour</h4>
-              <div class="iDiv">
-                <a href="https://github.com/moelak" alt="Mohamed laknhour Github account"><i class="fab fa-github"
-                    href="https://github.com/moelak"></i></a>
-                <a href="https://www.linkedin.com/in/mohammad-laknahour-24279b109/"
-                  alt="Mohamed laknhour linkedin account"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:m.laknahour1990@gmail.com" alt="Send an email to Mohamed laknhour"><i
-                    class="far fa-envelope"></i></a>
+    <!------------ Developers section ------------>
+    <section id="developer">
+      <div class="grid-container" id="grid-container">
+        <h1>MEET THE TEAM</h1>
+        <div class="grid-x grid-margin-x small-up-2 medium-up-3">
+          <!-- The first card "Moe" -->
+          <div class="cell">
+            <div class="card">
+              <img
+                src="image/Moe.PNG"
+                alt="Photo of the developer Mohamed laknhour"
+              />
+              <div class="card-section">
+                <h4>Moe Laknahour</h4>
+                <div class="iDiv">
+                  <a
+                    href="https://github.com/moelak"
+                    alt="Mohamed laknhour Github account"
+                    ><i
+                      class="fab fa-github"
+                      href="https://github.com/moelak"
+                    ></i
+                  ></a>
+                  <a
+                    href="https://www.linkedin.com/in/mohammad-laknahour-24279b109/"
+                    alt="Mohamed laknhour linkedin account"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+                  <a
+                    href="mailto:m.laknahour1990@gmail.com"
+                    alt="Send an email to Mohamed laknhour"
+                    ><i class="far fa-envelope"></i
+                  ></a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- The second card "Shady" -->
-        <div class="cell">
-          <div class="card">
-            <img src="image/Shady.jpg" alt="Photo of the developer Shady Saleh">
-            <div class="card-section">
-              <h4>Shady Saleh</h4>
-              <div class="iDiv">
-                <a href="https://github.com/shadysaleh01" alt="Shady Saleh Github account"><i
-                    class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/shady-saleh01/" alt="Shady Saleh linkedin account"><i
-                    class="fab fa-linkedin"></i></a>
-                <a href="mailto:shadysaleh01@gmail.com" alt="Send an email to Shady Saleh"><i
-                    class="far fa-envelope"></i></a>
+          <!-- The second card "Shady" -->
+          <div class="cell">
+            <div class="card">
+              <img
+                src="image/Shady.jpg"
+                alt="Photo of the developer Shady Saleh"
+              />
+              <div class="card-section">
+                <h4>Shady Saleh</h4>
+                <div class="iDiv">
+                  <a
+                    href="https://github.com/shadysaleh01"
+                    alt="Shady Saleh Github account"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                  <a
+                    href="https://www.linkedin.com/in/shady-saleh01/"
+                    alt="Shady Saleh linkedin account"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+                  <a
+                    href="mailto:shadysaleh01@gmail.com"
+                    alt="Send an email to Shady Saleh"
+                    ><i class="far fa-envelope"></i
+                  ></a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- The third card "Raul" -->
-        <div class="cell">
-          <div class="card">
-            <img src="image/Raul.jpg" alt="Photo of the developer Raul Oropesa">
-            <div class="card-section">
-              <h4>Raul Oropesa</h4>
-              <div class="iDiv">
-                <a href="#" alt="Raul Oropesa Github account"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/raul-oropesa-ab1549172" alt="Raul Oropesa linkedin account"><i
-                    class="fab fa-linkedin"></i></a>
-                <a href="mailto:alexoropesa1982@yahoo.com" alt="Send an email to Raul Oropesa"><i
-                    class="far fa-envelope"></i></a>
+          <!-- The third card "Raul" -->
+          <div class="cell">
+            <div class="card">
+              <img
+                src="image/Raul.jpg"
+                alt="Photo of the developer Raul Oropesa"
+              />
+              <div class="card-section">
+                <h4>Raul Oropesa</h4>
+                <div class="iDiv">
+                  <a href="#" alt="Raul Oropesa Github account"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                  <a
+                    href="https://www.linkedin.com/in/raul-oropesa-ab1549172"
+                    alt="Raul Oropesa linkedin account"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+                  <a
+                    href="mailto:alexoropesa1982@yahoo.com"
+                    alt="Send an email to Raul Oropesa"
+                    ><i class="far fa-envelope"></i
+                  ></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!------------ End of developer section -------------->
+    </section>
+    <!------------ End of developer section -------------->
 
-  <!------------ Footer section ------------->
-  <footer>
-    <p>Price-Right ©2020. All rights reserved</p>
-    <!----- The scroll button that on the screen ----->
-    <a href="#header" id="go-up"><i class="fas fa-arrow-alt-circle-up"></i></a>
-  </footer>
-  <!------------ End footer section ------------>
+    <!------------ Footer section ------------->
+    <footer>
+      <p>Price-Right ©2020. All rights reserved</p>
+      <!----- The scroll button that on the screen ----->
+      <a href="#header" id="go-up"
+        ><i class="fas fa-arrow-alt-circle-up"></i
+      ></a>
+    </footer>
+    <!------------ End footer section ------------>
 
-  <script src="js/vendor/jquery.js"></script>
-  <script src="js/vendor/what-input.js"></script>
-  <script src="js/vendor/foundation.min.js"></script>
-  <script src="js/vendor/app.js"></script>
-  <script src="js/scrolling.js"></script>
-  <script src="js/face-api.js"></script>
-  <script src="js/script.js"></script>
-
-
-</body>
-
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script src="js/vendor/app.js"></script>
+    <script src="js/scrolling.js"></script>
+    <script src="js/face-api.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/mouthDetection.js"></script>
+  </body>
 </html>
