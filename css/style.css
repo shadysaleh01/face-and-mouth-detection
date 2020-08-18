@@ -146,6 +146,74 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+#btns-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#videoDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#btnsDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+#pauseBtn {
+  color: rgb(185, 7, 7);
+  font-size: 50px;
+  margin-left: 20px;
+}
+
+#startBtn {
+  color: green;
+  font-size: 50px;
+  margin-right: 20px;
+}
+
+#table {
+  width: 400px;
+  height: 400px;
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+  margin-right: 1%;
+  border: 2px gray solid;
+  line-height: 0;
+}
+#table th {
+  font-family: serif;
+  font-size: 35px;
+}
+
+#msgDiv {
+  background-color: #fff;
+  width: 420px;
+  height: 400px;
+  text-align: center;
+  margin-left: 1%;
+  margin-bottom: 20px;
+  border: 1px gray solid;
+}
+#msgDiv h2 {
+  font-size: 45px;
+  font-family: serif;
+  padding: 0;
+  margin: 0;
+}
+hr {
+  margin: 0;
+}
+#msgDiv p {
+  padding: 13px;
 }
 
 #btns-video{
@@ -224,9 +292,66 @@ canvas {
 }
 
 /*------------ End of Face detection section ------------*/
+/*------------ Mouth detection section ------------*/
+#mouthDetection {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+i.fas.fa-microphone-alt.talking {
+  font-size: 42px;
+  color: red;
+}
+
+i.fas.fa-microphone-alt-slash.silent {
+  font-size: 42px;
+  color: red;
+}
+
+.mice-icon {
+  position: absolute;
+  top: 85%;
+}
+
+#btns-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#videoDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#btnsDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+#pauseBtn2 {
+  color: rgb(185, 7, 7);
+  font-size: 50px;
+  margin-left: 20px;
+}
+
+#startBtn2 {
+  color: green;
+  font-size: 50px;
+  margin-right: 20px;
+}
+
+/*------------ End of Mouth detection section ------------*/
 /*------------ About us section -----------*/
 #aboutUs {
-  background-color: white;
+  background-color: rgb(243 240 239);
   overflow: auto;
   width: 1000px;
   display: flex;
@@ -274,7 +399,7 @@ canvas {
 /*------------- End of about us section -------------*/
 /*------------- Developer section ------------- */
 #developer {
-  background-color: rgb(243 240 239);
+  background-color: white;
   padding-top: 5%;
 }
 
@@ -346,38 +471,37 @@ footer p {
 /* ---------End of the scroll button-----------*/
 /*---------- Media Rule ------------*/
 @media only screen and (max-width: 1350px) {
-    /* --------- Face detectionb section ----------- */
-    #faceDetection {
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-    #btns-video {
-      width: 100%;
-    }
-    #btns-div {
-      width: 100%;
-    }
-    #table {
-      order: 2;
-      width: 47%;
-      height: 200px;
-      margin: 0;
-      margin-bottom: 20px;
-  
-    }
-    #msgDiv {
-      width: 47%;
-      height: 200px;
-      margin: 0;
-      margin-bottom: 20px;
-    }
-    /* --------- End of face detection section -----------*/
+  /* --------- Face detectionb section ----------- */
+  #faceDetection {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #btns-video {
+    width: 100%;
+  }
+  #btns-div {
+    width: 100%;
+  }
+  #table {
+    order: 2;
+    width: 47%;
+    height: 200px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  #msgDiv {
+    width: 47%;
+    height: 200px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  /* --------- End of face detection section -----------*/
 }
 
 @media only screen and (max-width: 980px) {
 
   /* --------- Search section ----------- */
-  .imageItem { 
+  .imageItem {
     max-width: 12%;
   }
   .grid-x > .small-4 {
@@ -481,23 +605,23 @@ footer p {
 
 @media only screen and (max-width: 640px) {
   /* --------- Search section ----------- */
-    .logoImage {
-      width: 145px;
-      position: relative;
-    }
-    .menu a {
-      font-size: 16px;
-    }
-    .fa {
-      padding: 2px;
-    }
-    .eachItem {
-      font-size: 18px;
-    }
-    .grid-margin-x.medium-up-3 > .cell {
-      width: 65%;
-      margin-left: 18%;
-    }
+  .logoImage {
+    width: 145px;
+    position: relative;
+  }
+  .menu a {
+    font-size: 16px;
+  }
+  .fa {
+    padding: 2px;
+  }
+  .eachItem {
+    font-size: 18px;
+  }
+  .grid-margin-x.medium-up-3 > .cell {
+    width: 65%;
+    margin-left: 18%;
+  }
   /* ------------ End search section ----------- */
   /*--------About us section-------- */
   #aboutUs {
