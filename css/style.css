@@ -43,6 +43,8 @@ header {
 }
 /* -----------End of header ------------- */
 
+
+
 /*------------ banner section ---------------*/
 #banner {
   height: 70vh;
@@ -214,11 +216,81 @@ hr {
   padding: 13px;
 }
 
+#btns-video{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#videoDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#btnsDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+#pauseBtn {
+  color: rgb(185, 7, 7);
+  font-size: 50px;
+  margin-left: 20px;
+} 
+
+#startBtn {
+  color: green;
+  font-size: 50px;
+  margin-right: 20px;
+}
+
+#table {
+  width: 400px;
+  height: 400px;
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+  margin-right: 1%;
+  border: 2px gray solid;
+  line-height: 0;
+}
+#table th {
+  font-family: serif;
+  font-size: 35px;
+}
+
+#msgDiv {
+  background-color: #fff;
+  /* max-width:350px;
+  min-width: 350px; */
+  width: 420px;
+  height: 400px;
+  text-align: center;
+  margin-left: 1%;
+  margin-bottom: 20px;
+  border: 1px gray solid;
+}
+#msgDiv h2 {
+  font-size: 45px;
+  font-family: serif;
+  padding: 0;
+  margin: 0;
+}
+hr {
+  margin: 0;
+}
+#msgDiv p {
+  padding: 13px;
+}
+
 canvas {
   position: absolute;
   justify-content: center;
   align-items: center;
 }
+
 /*------------ End of Face detection section ------------*/
 /*------------ Mouth detection section ------------*/
 #mouthDetection {
@@ -427,6 +499,7 @@ footer p {
 }
 
 @media only screen and (max-width: 980px) {
+
   /* --------- Search section ----------- */
   .imageItem {
     max-width: 12%;
