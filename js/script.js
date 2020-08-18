@@ -21,7 +21,9 @@ function startVideo() {
    )
 }
 
-var canvas
+startVideo();
+/*------ End of the detection section-----*/
+var canvas;
 var setVal;
 startBtn.addEventListener('click', () => {
    canvas = faceapi.createCanvasFromMedia(video)
@@ -37,11 +39,34 @@ startBtn.addEventListener('click', () => {
       faceapi.draw.drawDetections(canvas, resizedDetections)
       faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)
       faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
-   }, 100)
+   } ,100)
 })
 pauseBtn.addEventListener('click', function () {
    clearInterval(setVal)
    canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height)
 })
 
-////////////// End of the detection section ////////////////
+////////////// End of the detection section ///////////////
+
+/*----------- Added joke-api and ajax call------------*/
+var settings = {
+   "async": true,
+   "crossDomain": true,
+   "url": "https://dad-jokes.p.rapidapi.com/random/jokes",
+   "method": "GET",
+   "headers": {
+     "x-rapidapi-host": "dad-jokes.p.rapidapi.com",
+     "x-rapidapi-key": "02155f308amsh0a960e0a1ff50bap185b16jsn1abe372cf955"
+   }
+ }
+ $.ajax(settings).then(function (response) {
+   console.log(response);
+   var questions= response.setup;
+    console.log(questions);
+    var answers= response.punchline;
+    console.log(answers);
+
+/*----- appended the question and answer to the <p> tags in the model section-----*/
+$(".question").append(questions)
+$(".answer").append(answers)
+ });
