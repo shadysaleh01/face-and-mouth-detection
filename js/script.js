@@ -27,8 +27,9 @@ var canvas;
 var setVal;
 startBtn.addEventListener('click', () => {
    canvas = faceapi.createCanvasFromMedia(video)
-   document.querySelector("#faceDetection").appendChild(canvas)
+   document.querySelector("#videoDiv").appendChild(canvas)
    const displaySize = { width: video.width, height: video.height }
+   faceapi.matchDimensions(canvas, displaySize)
    setVal = setInterval(async () => {
       const detections = await faceapi.detectAllFaces(video, new
          faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions()
