@@ -1,24 +1,30 @@
 ////////////// The face detection section ///////////////
 
-
-const video = document.querySelector("#video")
-const startBtn = document.querySelector("#startBtn")
-const pauseBtn = document.querySelector("#pauseBtn")
+const video = document.querySelector('#video');
+const startBtn = document.querySelector('#startBtn');
+const pauseBtn = document.querySelector('#pauseBtn');
 
 Promise.all([
-   faceapi.nets.tinyFaceDetector.loadFromUri('https://moelak.oudemo.com/_resources/models'),
-   faceapi.nets.faceLandmark68Net.loadFromUri('https://moelak.oudemo.com/_resources/models'),
-   faceapi.nets.faceRecognitionNet.loadFromUri('https://moelak.oudemo.com/_resources/models'),
-   faceapi.nets.faceExpressionNet.loadFromUri('https://moelak.oudemo.com/_resources/models'),
-]).then(startVideo)
-
+   faceapi.nets.tinyFaceDetector.loadFromUri(
+      'https://moelak.oudemo.com/_resources/models'
+   ),
+   faceapi.nets.faceLandmark68Net.loadFromUri(
+      'https://moelak.oudemo.com/_resources/models'
+   ),
+   faceapi.nets.faceRecognitionNet.loadFromUri(
+      'https://moelak.oudemo.com/_resources/models'
+   ),
+   faceapi.nets.faceExpressionNet.loadFromUri(
+      'https://moelak.oudemo.com/_resources/models'
+   ),
+]).then(startVideo);
 
 function startVideo() {
    navigator.getUserMedia(
       { video: {} },
-      stream => (video.srcObject) = stream,
+      stream => (video.srcObject = stream),
       err => console.error(err)
-   )
+   );
 }
 
 startVideo();
@@ -42,9 +48,9 @@ startBtn.addEventListener('click', () => {
    }, 100)
 })
 pauseBtn.addEventListener('click', function () {
-   clearInterval(setVal)
-   canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height)
-})
+   clearInterval(setVal);
+   canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+});
 
 ////////////// End of the detection section ///////////////
 
@@ -57,15 +63,15 @@ var settings = {
    "method": "GET",
    "headers": {
       "x-rapidapi-host": "dad-jokes.p.rapidapi.com",
-      "x-rapidapi-key": "f10a5db9ffmsh059e62e88d9c762p1f2f47jsn52bb249a4195"
+      "x-rapidapi-key": "a53c3d1b8dmsh1b5a043b6a1b729p12a02cjsncc53fe89ef2d"
    }
 }
 $.ajax(settings).then(function (response) {
    console.log(response);
    var questions = response.setup;
-   console.log(questions);
+   // console.log(questions);
    var answers = response.punchline;
-   console.log(answers);
+   // console.log(answers);
    $('.button1').on('click', function () {
       console.log('click');
       $(".question").append(questions)
@@ -74,3 +80,4 @@ $.ajax(settings).then(function (response) {
    /*----- appended the question and answer to the <p> tags in the model section-----*/
 
 });
+

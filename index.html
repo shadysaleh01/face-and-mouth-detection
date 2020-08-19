@@ -9,12 +9,9 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.css" />
-
-
 </head>
 
 <body>
-
   <!----------- The header  ------------->
   <header id="header">
     <nav class="sticky" data-sticky data-options="marginTop:0;" style="z-index: 2;">
@@ -25,25 +22,33 @@
 
       <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
         <div class="top-bar-left">
-          <span class="title-bar-title" id="logo"><img class="logoImage" src="./image/best-price-2.png"></span>
+          <span class="title-bar-title" id="logo"><img class="logoImage" src="./image/best-price-2.png" /></span>
 
-          <ul class="dropdown menu float-right " data-dropdown-menu>
-            <li><a href="#header"><i class="fa fa-home"></i>Home</a></li>
-            <li> <a href="#faceDetection"><i class="fa fa-search"></i>Search</a></li>
-            <li> <a href="#aboutUs"><i class="fa fa-address-card"></i>About us</a></li>
-            <li><a href="#developer"><i class="fa fa-laptop"></i>Developers</a></li>
+          <ul class="dropdown menu float-right" data-dropdown-menu>
+            <li>
+              <a href="#header"><i class="fa fa-home"></i>Home</a>
+            </li>
+            <li>
+              <a href="#faceDetection"><i class="fa fa-search"></i>Search</a>
+            </li>
+            <li>
+              <a href="#aboutUs"><i class="fa fa-address-card"></i>About us</a>
+            </li>
+            <li>
+              <a href="#developer"><i class="fa fa-laptop"></i>Developers</a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
   <!------------ End of header ----------->
+
   <!------------ Banner section ----------->
   <section id="banner">
     <div class="hero-section">
       <div class="hero-section-text">
-        <h2>Price Checker</h2>
-        <h5>Find the best price and save money!!</h5>
+        <h2>Face Detection</h2>
       </div>
     </div>
     <div class="mouse-scroll fade-in">
@@ -55,6 +60,7 @@
     </div>
   </section>
   <!------------ End of banner section ------------>
+
   <!------------ The face tedection section -------------->
   <section id="faceDetection">
     <table id="table">
@@ -86,7 +92,7 @@
     </div>
     <div id="msgDiv">
       <h2>Your Feeling</h2>
-      <hr>
+      <hr />
       <p><button class="button button1">Click me for a modal</button></p>
       <div class="jokeDiv">
         <p class="lead question"></p>
@@ -95,37 +101,63 @@
     </div>
   </section>
   <!------------ End of fase tedection section ----------->
-  <!------------ About us section --------------->
-  <section id="aboutUs">
-    <h1>About Us</h1>
-    <div class="imgDiv">
-      <img src="image/emotions.jpg" alt="best price img" id="best-price"><br>
+  <!------------ The face tedection section -------------->
+
+  <section class="mouthDetection">
+    <div id="mouthDetection">
+      <div id="btns-video">
+        <div id="videoDiv">
+          <video id="video2" width="600" height="500" autoplay muted></video>
+          <div class="mice-icon">
+            <i class="fas fa-microphone-alt talking" style="color: red; display: none;"></i>
+            <i class="fas fa-microphone-alt-slash silent" style="color: red; display: none;"></i>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="pDiv">
-      <p>We are working on face recongnition so it can recognize facial expressions, and also try to determine the age,
-        and gender of the
-        the User being streamed on the website. Depending on the Users facial expressions giphy's will be rendered
-        suitable to the current expression.
-      </p>
-      <br>
-      <p>
-        In this project we used a face recognition API(face-api.js), giphy-api, javaScript, jQuery, HTML, CSS and
-        foundation markup. Some of our backrounds include
-        Computer Science and beginner development with the goal of expanding our knowledge within the realm of Full
-        Stack Development.
-      </p>
+    <div id="btnsDiv">
+      <i id="startBtn2" class="fas fa-play-circle"></i>
+      <i id="pauseBtn2" class="fas fa-pause-circle"></i>
+    </div>
+  </section>
+  <!------------ End of fase tedection section ----------->
+  <!------------ About us section --------------->
+  <section class="aboutUs">
+    <div id="aboutUs">
+      <h1>About Us</h1>
+      <div class="imgDiv">
+        <img src="image/emotions.jpg" alt="best price img" id="best-price" /><br />
+      </div>
+      <div class="pDiv">
+        <p>
+          We are working on face recongnition so it can recognize facial
+          expressions, and also try to determine the age, and gender of the
+          the User being streamed on the website. Depending on the Users
+          facial expressions giphy's will be rendered suitable to the current
+          expression.
+        </p>
+        <br />
+        <p>
+          In this project we used a face recognition API(face-api.js),
+          giphy-api, javaScript, jQuery, HTML, CSS and foundation markup. Some
+          of our backrounds include Computer Science and beginner development
+          with the goal of expanding our knowledge within the realm of Full
+          Stack Development.
+        </p>
+      </div>
     </div>
   </section>
   <!------------ End of about us ------------>
+
   <!------------ Developers section ------------>
   <section id="developer">
     <div class="grid-container" id="grid-container">
-      <h1> MEET THE TEAM</h1>
+      <h1>MEET THE TEAM</h1>
       <div class="grid-x grid-margin-x small-up-2 medium-up-3">
         <!-- The first card "Moe" -->
         <div class="cell">
           <div class="card">
-            <img src="image/Moe.PNG" alt="Photo of the developer Mohamed laknhour">
+            <img src="image/Moe.PNG" alt="Photo of the developer Mohamed laknhour" />
             <div class="card-section">
               <h4>Moe Laknahour</h4>
               <div class="iDiv">
@@ -142,7 +174,7 @@
         <!-- The second card "Shady" -->
         <div class="cell">
           <div class="card">
-            <img src="image/Shady.jpg" alt="Photo of the developer Shady Saleh">
+            <img src="image/Shady.jpg" alt="Photo of the developer Shady Saleh" />
             <div class="card-section">
               <h4>Shady Saleh</h4>
               <div class="iDiv">
@@ -159,7 +191,7 @@
         <!-- The third card "Raul" -->
         <div class="cell">
           <div class="card">
-            <img src="image/Raul.jpg" alt="Photo of the developer Raul Oropesa">
+            <img src="image/Raul.jpg" alt="Photo of the developer Raul Oropesa" />
             <div class="card-section">
               <h4>Raul Oropesa</h4>
               <div class="iDiv">
@@ -176,6 +208,7 @@
     </div>
   </section>
   <!------------ End of developer section -------------->
+
   <!------------ Footer section ------------->
   <footer>
     <p>Price-Right ©2020. All rights reserved</p>
@@ -183,6 +216,7 @@
     <a href="#header" id="go-up"><i class="fas fa-arrow-alt-circle-up"></i></a>
   </footer>
   <!------------ End footer section ------------>
+
   <script src="js/vendor/jquery.js"></script>
   <script src="js/vendor/what-input.js"></script>
   <script src="js/vendor/foundation.min.js"></script>
@@ -190,8 +224,7 @@
   <script src="js/scrolling.js"></script>
   <script src="js/face-api.js"></script>
   <script src="js/script.js"></script>
-
-
+  <script src="js/mouthDetection.js"></script>
 </body>
 
 </html>
