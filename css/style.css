@@ -172,13 +172,11 @@ header {
   font-size: 50px;
   margin-left: 20px;
 }
-
 #startBtn {
   color: green;
   font-size: 50px;
   margin-right: 20px;
 }
-
 #table {
   width: 350px;
   height: 400px;
@@ -193,7 +191,6 @@ header {
   font-family: serif;
   font-size: 35px;
 }
-
 #msgDiv {
   background-color: #fff;
   width: 400px;
@@ -201,7 +198,7 @@ header {
   text-align: center;
   margin-left: 1%;
   margin-bottom: 20px;
-  border: 1px gray solid;
+  border: 1.5px gray solid;
 }
 #msgDiv h2 {
   font-family: serif;
@@ -538,17 +535,22 @@ footer p {
     margin: 2%;
     margin-top: 5%;
     display: flex;
+    justify-content: center;
     flex-direction: row;
   }
   #aboutUs h1 {
     font-size: 45px;
   }
   .imgDiv {
-    width: 100%;
+    width: 90%;
     flex-wrap: nowrap;
   }
+  .imgDiv img {
+    height: 350px;
+  }
   .pDiv {
-    width: 100%;
+    width: 90%;
+    font-size: 15px;
   }
   /* ---------End of about us section---------*/
   /* ---------Developer section---------- */
