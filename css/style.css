@@ -139,9 +139,9 @@ header {
 /*------------- End of search section -------------*/
 /*------------- Face detection section -------------*/
 #faceDetection {
-  background-color: rgb(243 240 239);
+  background-color: #fff;
   margin: 0;
-  padding: 0;
+  padding: 1%;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -164,7 +164,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   width: 100%;
 }
 #pauseBtn {
@@ -172,15 +172,13 @@ header {
   font-size: 50px;
   margin-left: 20px;
 }
-
 #startBtn {
   color: green;
   font-size: 50px;
   margin-right: 20px;
 }
-
 #table {
-  width: 400px;
+  width: 350px;
   height: 400px;
   font-size: 25px;
   text-align: center;
@@ -193,87 +191,16 @@ header {
   font-family: serif;
   font-size: 35px;
 }
-
 #msgDiv {
   background-color: #fff;
-  width: 420px;
-  height: 400px;
-  text-align: center;
-  margin-left: 1%;
-  margin-bottom: 20px;
-  border: 1px gray solid;
-}
-#msgDiv h2 {
-  font-size: 45px;
-  font-family: serif;
-  padding: 0;
-  margin: 0;
-}
-hr {
-  margin: 0;
-}
-#msgDiv p {
-  padding: 13px;
-}
-
-#btns-video{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-#videoDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#btnsDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-  width: 100%;
-}
-#pauseBtn {
-  color: rgb(185, 7, 7);
-  font-size: 50px;
-  margin-left: 20px;
-} 
-
-#startBtn {
-  color: green;
-  font-size: 50px;
-  margin-right: 20px;
-}
-
-#table {
   width: 400px;
   height: 400px;
-  font-size: 25px;
-  text-align: center;
-  margin: 0;
-  margin-right: 1%;
-  border: 2px gray solid;
-  line-height: 0;
-}
-#table th {
-  font-family: serif;
-  font-size: 35px;
-}
-
-#msgDiv {
-  background-color: #fff;
-  /* max-width:350px;
-  min-width: 350px; */
-  width: 420px;
-  height: 400px;
   text-align: center;
   margin-left: 1%;
   margin-bottom: 20px;
-  border: 1px gray solid;
+  border: 1.5px gray solid;
 }
 #msgDiv h2 {
-  font-size: 45px;
   font-family: serif;
   padding: 0;
   margin: 0;
@@ -281,20 +208,17 @@ hr {
 hr {
   margin: 0;
 }
-#msgDiv p {
-  padding: 13px;
-}
-
 canvas {
   position: absolute;
   justify-content: center;
   align-items: center;
 }
-
 /*------------ End of Face detection section ------------*/
 /*------------ Mouth detection section ------------*/
+section.mouthDetection {
+  background-color: rgb(243 240 239);
+}
 #mouthDetection {
-  background-color: white;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -318,24 +242,6 @@ i.fas.fa-microphone-alt-slash.silent {
   top: 85%;
 }
 
-#btns-video {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-#videoDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#btnsDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-  width: 100%;
-}
 #pauseBtn2 {
   color: rgb(185, 7, 7);
   font-size: 50px;
@@ -351,18 +257,17 @@ i.fas.fa-microphone-alt-slash.silent {
 /*------------ End of Mouth detection section ------------*/
 /*------------ About us section -----------*/
 section.aboutUs {
-  background-color: rgb(243 240 239);
+  background-color: #fff;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 #aboutUs {
-  background-color: rgb(243 240 239);
   overflow: auto;
   width: 1000px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin: auto;
-  margin-top: 5%;
-  margin-bottom: 5%;
 }
 
 #aboutUs h1 {
@@ -371,38 +276,36 @@ section.aboutUs {
   text-align: center;
   color: rgb(170, 4, 4);
   font-family: serif;
+  margin-bottom: 5%;
 }
 /*  The div that hold the images */
 .imgDiv {
-  width: 45%;
-  padding: 15px;
+  width: 50%;
   display: flex;
+  padding-right: 5px;
+  justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
 }
-
-#aboutUs img {
+/* #aboutUs img {
   height: 400px;
-}
-/* The lowest price img */
-#low-price {
-  margin-top: 20px;
-}
+} */
 /* The div that hold P */
 .pDiv {
-  padding: 15px;
-  width: 55%;
-  margin-top: 40px;
+  width: 50%;
+  background-color: #fff;
+  padding-top: 25px;
 }
 /* The actual p */
 .pDiv p {
   font-size: 20px;
+  margin: 0;
 }
 /*------------- End of about us section -------------*/
 /*------------- Developer section ------------- */
 #developer {
-  background-color: white;
+  background-color: rgb(243 240 239);
+  padding-bottom: 5%;
   padding-top: 5%;
 }
 
@@ -494,10 +397,13 @@ footer p {
   }
   #msgDiv {
     width: 47%;
-    height: 200px;
+    height: auto;
+    min-height: 200px;
     margin: 0;
     margin-bottom: 20px;
   }
+
+  
   /* --------- End of face detection section -----------*/
 }
 
@@ -522,13 +428,7 @@ footer p {
   #aboutUs h1 {
     font-size: 55px;
   }
-  .imgDiv {
-    width: 45%;
-    flex-wrap: wrap;
-  }
-  .pDiv {
-    width: 55%;
-  }
+
   /* ----------End of about us section----------- */
   /* ----------Developer section---------- */
   #grid-container h1 {
@@ -541,7 +441,7 @@ footer p {
   /* ------------ Face detection section ------------*/
   #msgDiv {
     width: 90%;
-    height: 200px;
+    height: auto;
     margin-bottom: 1%;
   }
   #table {
@@ -565,19 +465,22 @@ footer p {
   /* -------------About us section------------- */
   #aboutUs {
     width: 96%;
-    margin: 2%;
+    padding: 2%;
     margin-top: 5%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
   #aboutUs h1 {
-    font-size: 50px;
+    font-size: 45px;
   }
   .imgDiv {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
   .pDiv {
     width: 100%;
+    background-color: #fff;
   }
   /* ----------End of about us section----------- */
   /* ----------Developer section---------- */
@@ -632,17 +535,22 @@ footer p {
     margin: 2%;
     margin-top: 5%;
     display: flex;
+    justify-content: center;
     flex-direction: row;
   }
   #aboutUs h1 {
     font-size: 45px;
   }
   .imgDiv {
-    width: 100%;
+    width: 90%;
     flex-wrap: nowrap;
   }
+  .imgDiv img {
+    height: 350px;
+  }
   .pDiv {
-    width: 100%;
+    width: 90%;
+    font-size: 15px;
   }
   /* ---------End of about us section---------*/
   /* ---------Developer section---------- */
