@@ -1,6 +1,4 @@
-#AI Face Detection
-
-<strong>AI Face & Mouth Detection</strong>
+<h1>AI Face & Mouth Detection</h1>
 <hr>
 <ul>
   <a href="https://github.com/moelak/price-checker"><li>Face-Detection Github</li></a>
