@@ -267,6 +267,15 @@ section.mouthDetection {
   align-items: center;
   position: relative;
 }
+
+#btns-video-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
 i.fas.fa-microphone-alt.talking {
   font-size: 42px;
   color: #88ce02;
@@ -294,7 +303,7 @@ i.fas.fa-microphone-alt-slash.silent {
 
 img.camera-image2 {
   width: 600px;
-  height: 442px;
+  height: 454px;
 }
 #video2 {
   position: relative;
@@ -302,6 +311,17 @@ img.camera-image2 {
 
 .camera-image2 {
   position: absolute;
+}
+
+img.button1.turnOnCamera2 {
+  position: absolute;
+  left: 92%;
+  bottom: 86%;
+}
+#videoDiv2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*------------ End of Mouth detection section ------------*/
