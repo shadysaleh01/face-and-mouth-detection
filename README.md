@@ -1,8 +1,8 @@
 <h1>AI Face & Mouth Detection</h1>
 <ul>
-  <a href="https://github.com/moelak/price-checker"><li>Face-Detection Github</li></a>
-  <a href="https://moelak.github.io/price-checker/"><li>Face-Detection Github IO</li></a>
-  <a href=""><li>Face-Detection Github Demo Video</li></a>
+  <li><a href="https://github.com/moelak/price-checker"><li>Face-Detection Github</a></li>
+  <li><a href="https://moelak.github.io/face-and-mouth-detection/"><li>Face-Detection Github IO</a></li>
+  <li><a href=""><li>Face-Detection Github Demo Video</a></li>
 </ul>
 
 <h1>Here will be video or slids</h1>
