@@ -89,10 +89,6 @@ button.orbit-previous {
   font-size: 24px;
 }
 
-
-
-
-
 /* Mouse scroll button on banner */
 
 @keyframes scroll_2 {
@@ -317,6 +313,7 @@ img.button1.turnOnCamera2 {
   position: absolute;
   left: 92%;
   bottom: 86%;
+  cursor: pointer;
 }
 #videoDiv2 {
   display: flex;
