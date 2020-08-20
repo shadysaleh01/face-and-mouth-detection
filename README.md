@@ -32,7 +32,7 @@
 <li>When the first play button is clicked it will analyze the users face</li>
 <li>After 5 seconds or when the pause button is clicked it will capture the expression, rendering data</li>
 <li>The data thats retrieved is placed in the appropriate section</li>
-<li>If the redo button is hit again it will restart the process</li>
+<li>If the redo button is clicked it will restart the process</li>
 <li>Depending on the expression captured, a joke will be displayed to the user</li>
 <li>When the second play button is hit the video will be initiated</li>
 <li>When the user talks a microphone icon will appear</li>
