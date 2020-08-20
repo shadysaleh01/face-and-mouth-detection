@@ -96,9 +96,9 @@ video2.addEventListener('play', () => {
           $('.talking').attr('style', 'display: none;');
           $('.silent').attr('style', 'display: block;');
         }
-        setTimeout(run2, 10);
+        setTimeout(run2, 50);
       }
-    }, 10);
+    }, 50);
   }
 });
 
