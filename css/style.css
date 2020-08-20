@@ -189,9 +189,16 @@ button.orbit-previous {
 
 #btns-video {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+#btns-video h1{
+  width: 100%;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #e49401;
 }
 #videoDiv {
   display: flex;
@@ -202,7 +209,7 @@ button.orbit-previous {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 20px;
+  padding: 40px;
   width: 100%;
   position: relative;
 }
