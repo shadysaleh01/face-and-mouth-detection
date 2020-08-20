@@ -207,8 +207,11 @@ button.orbit-previous {
   position: relative;
 }
 #pauseBtn {
-  color: rgb(185, 7, 7);
+  color: rgb(187, 1, 1);
   font-size: 50px;
+}
+#redo  {
+  font-size:50px;
 }
 #startBtn {
   color: green;

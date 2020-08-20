@@ -22,6 +22,7 @@ Promise.all([
     console.log('start');
     $('.camera-image').remove();
     $('#startBtn').hide();
+    $('#redo').hide()
     $('#pauseBtn').show();
     startVideo();
   })
@@ -49,6 +50,7 @@ video.addEventListener('play', () => {
 
   pauseBtn.addEventListener('click', function () {
     $('#pauseBtn').hide();
+    $('#redo').hide();
     $('#startBtn').show();
     clearInterval(setVal);
   });
@@ -87,6 +89,8 @@ video.addEventListener('play', () => {
 
       if (counter === 20) {
         clearInterval(setVal);
+        $("canvas").hide()
+
         console.log('emptyArr: ' + emptyArr);
         // var arr = JSON.stringify(emptyArr);
 
@@ -100,9 +104,20 @@ video.addEventListener('play', () => {
         );
 
         console.log('mostFrequent: ' + mostFrequent);
-        $('.emotion').append(mostFrequent);
+        // var upper = mostFrequent.charAt(0).toUpperCase() + mostFrequent.substring(1)
+        var span;
+        var something = " ";
+        function moe() {
+          span = $("<span>").attr("class", "test")
+          span.text(" ")
+          something = span.text(mostFrequent);
+        }
+        moe()
 
-        if ('sad' == mostFrequent) {
+        $('.emotion').append(something)
+
+
+        if (('sad' == mostFrequent) || ('angry' == mostFrequent)) {
           var settings = {
             async: true,
             crossDomain: true,
@@ -114,22 +129,54 @@ video.addEventListener('play', () => {
                 'a53c3d1b8dmsh1b5a043b6a1b729p12a02cjsncc53fe89ef2d',
             },
           };
+
           $.ajax(settings).then(function (response) {
             console.log(response);
             var questions = response.setup;
             // console.log(questions);
-            var answers = response.punchline;
+            answers = response.punchline;
             // console.log(answers);
 
             $('.question').append(questions);
             $('.answer').append(answers);
-
             /*----- appended the question and answer to the <p> tags in the model section-----*/
           });
         }
+        else if ('happy' == mostFrequent) {
+          var happyTxt = "Get out of here!"
+          $('.question').append(happyTxt);
+          $('.answer').text("");
+        }
+        else if ('disgusting' == mostFrequent) {
+          var disgustingTxt = "Hey what's wrong with your face"
+          $('.question').append(disgustingTxt);
+          $('.answer').text("");
+        }
+        else if ('surprised' == mostFrequent) {
+          var surprisedTxt = "Dude, why you're surpris"
+          console.log("surprisedTxt hhhhhhhhhhhh")
+          $('.question').append(surprisedTxt);
+          $('.answer').text("");
+        }
+
+        $('#startBtn').hide();
+        $('#redo').show()
+        $('#pauseBtn').hide();
+
+
       }
     }, 100);
   }
+  $('#redo').click(function () {
+    console.log('start');
+    $(".question").text(" ")
+    $(".emotion").empty()
+    $('#startBtn').hide();
+    $('#redo').hide()
+    $('#pauseBtn').show();
+    $("canvas").show()
+    run()
+  })
 });
 
 ////////////// End of the detection section ///////////////
