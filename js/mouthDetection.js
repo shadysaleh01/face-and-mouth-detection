@@ -85,7 +85,7 @@ video2.addEventListener('play', () => {
         var maxNum = JSON.stringify(Math.max.apply(null, emptyArr));
         console.log(' hahahah-> ' + maxNum);
 
-        if (maxNum > 2.9) {
+        if (maxNum > 2.75) {
           $('.talking').attr('style', 'display: block;');
           $('.silent').attr('style', 'display: none;');
         } else {
