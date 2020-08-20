@@ -79,22 +79,22 @@ video2.addEventListener('play', () => {
 
       timesRun += 1;
       console.log('timesRun: ' + timesRun);
-      if (timesRun === 8) {
+      if (timesRun === 10) {
         clearInterval(interval);
         console.log('ARRRRRR: ' + JSON.stringify(emptyArr));
         var maxNum = JSON.stringify(Math.max.apply(null, emptyArr));
         console.log(' hahahah-> ' + maxNum);
 
-        if (maxNum > 2.75) {
+        if (maxNum > 2.7) {
           $('.talking').attr('style', 'display: block;');
           $('.silent').attr('style', 'display: none;');
         } else {
           $('.talking').attr('style', 'display: none;');
           $('.silent').attr('style', 'display: block;');
         }
-        setTimeout(run2, 50);
+        setTimeout(run2, 100);
       }
-    }, 50);
+    }, 100);
   }
 });
 
