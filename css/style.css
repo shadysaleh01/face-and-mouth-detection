@@ -290,11 +290,13 @@ i.fas.fa-microphone-alt-slash.silent {
 #pauseBtn2 {
   color: rgb(185, 7, 7);
   font-size: 50px;
+ cursor: pointer;
 }
 
 #startBtn2 {
   color: green;
   font-size: 50px;
+ cursor: pointer;
 }
 
 img.camera-image2 {
