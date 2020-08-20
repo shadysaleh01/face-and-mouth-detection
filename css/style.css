@@ -5,13 +5,13 @@ body {
 }
 
 /*------------- header -------------*/
-header {
-  background-color: #041363;
+#header {
+  background-color: #0c72c4;
 }
 
 .top-bar,
 .top-bar ul {
-  background-color: #041363;
+  background-color: #0c72c4;
 }
 
 .menu a {
@@ -45,34 +45,75 @@ header {
 
 /*------------ banner section ---------------*/
 #banner {
-  height: 70vh;
+  height: auto;
   margin-top: 0rem;
   padding: 0rem;
   margin: 0rem;
   position: relative;
 }
 
-.hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('https://www.the-blogsmith.com/wp-content/uploads/2018/09/social-media-image-sizes-1.png')
-      50% no-repeat;
-  background-size: cover;
-  height: 70vh;
-  text-align: center;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+button.orbit-next {
+  display: none;
 }
 
-.hero-section .hero-section-text {
+/* Hidig the slider arrow */
+button.orbit-next {
+  display: none;
+}
+
+button.orbit-previous {
+  display: none;
+}
+
+/* banner Slider */
+.orbit-container {
+  height: 700px !important;
+}
+
+.orbit-image {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  height: 650px;
+}
+
+.orbit-caption {
+  font-weight: bolder;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 1rem;
+  background-color: rgba(10, 10, 10, 0.5);
   color: #fefefe;
-  text-shadow: 1px 1px 2px #0a0a0a;
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 890px) {
+  .orbit-container {
+    height: 500px !important;
+  }
+  .orbit-image {
+    height: 500px;
+  }
+  .mouse-scroll {
+    top: 89%;
+  }
+}
+
+@media only screen and (max-width: 664px) {
+  .orbit-container {
+    height: 350px !important;
+  }
+  .orbit-image {
+    height: 350px;
+  }
+  .orbit-caption {
+    font-size: 16px;
+  }
+  .mouse-scroll {
+    top: 85%;
+  }
 }
 
 /* Mouse scroll button on banner */
@@ -132,14 +173,13 @@ header {
   justify-content: center;
   position: absolute;
   left: 50%;
-  bottom: 5%;
+  top: 85%;
 }
-/*------------- End of search section -------------*/
 /*------------- Face detection section -------------*/
 #faceDetection {
-  background-color: rgb(243 240 239);
+  background-color: #fff;
   margin: 0;
-  padding: 0;
+  padding: 1%;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -162,23 +202,21 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   width: 100%;
+  position: relative;
 }
 #pauseBtn {
   color: rgb(185, 7, 7);
   font-size: 50px;
-  margin-left: 20px;
 }
-
 #startBtn {
   color: green;
   font-size: 50px;
-  margin-right: 20px;
+  position: absolute;
 }
-
 #table {
-  width: 400px;
+  width: 350px;
   height: 400px;
   font-size: 25px;
   text-align: center;
@@ -191,18 +229,16 @@ header {
   font-family: serif;
   font-size: 35px;
 }
-
 #msgDiv {
   background-color: #fff;
-  width: 420px;
+  width: 400px;
   height: 400px;
   text-align: center;
   margin-left: 1%;
   margin-bottom: 20px;
-  border: 1px gray solid;
+  border: 1.5px gray solid;
 }
 #msgDiv h2 {
-  font-size: 45px;
   font-family: serif;
   padding: 0;
   margin: 0;
@@ -210,19 +246,42 @@ header {
 hr {
   margin: 0;
 }
-#msgDiv p {
-  padding: 13px;
-}
-
 canvas {
   position: absolute;
   justify-content: center;
   align-items: center;
 }
+
+div#videoDiv {
+  min-height: 450px;
+  height: auto;
+}
+
+img.camera-image {
+  width: 600px;
+  height: 442px;
+}
+#video {
+  position: relative;
+}
+
+.camera-image {
+  position: absolute;
+}
+
+#btns-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
 /*------------ End of Face detection section ------------*/
 /*------------ Mouth detection section ------------*/
+section.mouthDetection {
+  background-color: rgb(243 240 239);
+}
 #mouthDetection {
-  background-color: white;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -246,48 +305,42 @@ i.fas.fa-microphone-alt-slash.silent {
   top: 85%;
 }
 
-#btns-video {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-#videoDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#btnsDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-  width: 100%;
-}
 #pauseBtn2 {
   color: rgb(185, 7, 7);
   font-size: 50px;
-  margin-left: 20px;
 }
 
 #startBtn2 {
   color: green;
   font-size: 50px;
-  margin-right: 20px;
+}
+
+img.camera-image2 {
+  width: 600px;
+  height: 442px;
+}
+#video2 {
+  position: relative;
+}
+
+.camera-image2 {
+  position: absolute;
 }
 
 /*------------ End of Mouth detection section ------------*/
 /*------------ About us section -----------*/
+section.aboutUs {
+  background-color: #fff;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
 #aboutUs {
-  background-color: rgb(243 240 239);
   overflow: auto;
   width: 1000px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin: auto;
-  margin-top: 5%;
-  margin-bottom: 5%;
 }
 
 #aboutUs h1 {
@@ -296,38 +349,36 @@ i.fas.fa-microphone-alt-slash.silent {
   text-align: center;
   color: rgb(170, 4, 4);
   font-family: serif;
+  margin-bottom: 5%;
 }
 /*  The div that hold the images */
 .imgDiv {
-  width: 45%;
-  padding: 15px;
+  width: 50%;
   display: flex;
+  padding-right: 5px;
+  justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
 }
-
-#aboutUs img {
+/* #aboutUs img {
   height: 400px;
-}
-/* The lowest price img */
-#low-price {
-  margin-top: 20px;
-}
+} */
 /* The div that hold P */
 .pDiv {
-  padding: 15px;
-  width: 55%;
-  margin-top: 40px;
+  width: 50%;
+  background-color: #fff;
+  padding-top: 25px;
 }
 /* The actual p */
 .pDiv p {
   font-size: 20px;
+  margin: 0;
 }
 /*------------- End of about us section -------------*/
 /*------------- Developer section ------------- */
 #developer {
-  background-color: white;
+  background-color: rgb(243 240 239);
+  padding-bottom: 5%;
   padding-top: 5%;
 }
 
@@ -419,10 +470,12 @@ footer p {
   }
   #msgDiv {
     width: 47%;
-    height: 200px;
+    height: auto;
+    min-height: 200px;
     margin: 0;
     margin-bottom: 20px;
   }
+
   /* --------- End of face detection section -----------*/
 }
 
@@ -446,13 +499,7 @@ footer p {
   #aboutUs h1 {
     font-size: 55px;
   }
-  .imgDiv {
-    width: 45%;
-    flex-wrap: wrap;
-  }
-  .pDiv {
-    width: 55%;
-  }
+
   /* ----------End of about us section----------- */
   /* ----------Developer section---------- */
   #grid-container h1 {
@@ -465,7 +512,7 @@ footer p {
   /* ------------ Face detection section ------------*/
   #msgDiv {
     width: 90%;
-    height: 200px;
+    height: auto;
     margin-bottom: 1%;
   }
   #table {
@@ -489,19 +536,22 @@ footer p {
   /* -------------About us section------------- */
   #aboutUs {
     width: 96%;
-    margin: 2%;
+    padding: 2%;
     margin-top: 5%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
   #aboutUs h1 {
-    font-size: 50px;
+    font-size: 45px;
   }
   .imgDiv {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
   .pDiv {
     width: 100%;
+    background-color: #fff;
   }
   /* ----------End of about us section----------- */
   /* ----------Developer section---------- */
@@ -556,17 +606,22 @@ footer p {
     margin: 2%;
     margin-top: 5%;
     display: flex;
+    justify-content: center;
     flex-direction: row;
   }
   #aboutUs h1 {
     font-size: 45px;
   }
   .imgDiv {
-    width: 100%;
+    width: 90%;
     flex-wrap: nowrap;
   }
+  .imgDiv img {
+    height: 350px;
+  }
   .pDiv {
-    width: 100%;
+    width: 90%;
+    font-size: 15px;
   }
   /* ---------End of about us section---------*/
   /* ---------Developer section---------- */

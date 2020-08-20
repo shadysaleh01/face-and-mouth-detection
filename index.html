@@ -11,7 +11,31 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .button {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+
+      .button1 {
+        background-color: #4caf50;
+      } /* Green */
+      .button2 {
+        background-color: #008cba;
+      } /* Blue */
+    </style>
   </head>
 
   <body>
@@ -38,9 +62,9 @@
           data-animate="hinge-in-from-top spin-out"
         >
           <div class="top-bar-left">
-            <span class="title-bar-title" id="logo"
-              ><img class="logoImage" src="./image/best-price-2.png"
-            /></span>
+            <span class="title-bar-title" id="logo">
+              <img width="200px" class="logoImage" src="" />
+            </span>
 
             <ul class="dropdown menu float-right" data-dropdown-menu>
               <li>
@@ -66,51 +90,66 @@
 
     <!------------ Banner section ----------->
     <section id="banner">
-      <div class="hero-section">
-        <div class="hero-section-text">
-          <h2>Price Checker</h2>
-          <h5>Find the best price and save money!!</h5>
+      <div
+        class="orbit"
+        role="region"
+        aria-label="Favorite Space Pictures"
+        data-orbit
+        data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;"
+      >
+        <div class="orbit-wrapper">
+          <div class="orbit-controls">
+            <button class="orbit-previous">
+              <span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;
+            </button>
+            <button class="orbit-next">
+              <span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;
+            </button>
+          </div>
+          <ul class="orbit-container">
+            <li class="is-active orbit-slide">
+              <figure class="orbit-figure">
+                <img
+                  class="orbit-image"
+                  src="../image/face-recognition.jpg"
+                  alt="Space"
+                />
+                <figcaption class="orbit-caption">Face Detection</figcaption>
+              </figure>
+            </li>
+            <li class="orbit-slide">
+              <figure class="orbit-figure">
+                <img
+                  class="orbit-image"
+                  src="https://analyticsindiamag.com/wp-content/uploads/2020/04/Learn-Facial-Recognition-scaled.jpg"
+                  alt="Space"
+                />
+                <figcaption class="orbit-caption">Face Landmark 68</figcaption>
+              </figure>
+            </li>
+            <li class="orbit-slide">
+              <figure class="orbit-figure">
+                <img
+                  class="orbit-image"
+                  src="https://miro.medium.com/max/896/1*MnbUSSXG1IDS9mXC0H8cKQ.png"
+                  alt="Space"
+                />
+                <figcaption class="orbit-caption">Face Recognition</figcaption>
+              </figure>
+            </li>
+          </ul>
+          <div class="mouse-scroll fade-in">
+            <a href="#faceDetection">
+              <span class="scroll-icon">
+                <span class="scroll-icon__dot"></span>
+              </span>
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="mouse-scroll fade-in">
-        <a href="#faceDetection">
-          <span class="scroll-icon">
-            <span class="scroll-icon__dot"></span>
-          </span>
-        </a>
       </div>
     </section>
     <!------------ End of banner section ------------>
 
-    <!------------ model start ------------>
-    <section id="model">
-      <p>
-        <button class="button" data-toggle="animatedModal10">
-          Click me for a modal
-        </button>
-      </p>
-      <div
-        class="reveal"
-        id="animatedModal10"
-        data-reveal
-        data-close-on-click="true"
-        data-animation-in="spin-in"
-        data-animation-out="spin-out"
-      >
-        <p class="lead question"></p>
-        <p class="lead answer"></p>
-        <button
-          class="close-button"
-          data-close
-          aria-label="Close reveal"
-          type="button"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-    </section>
-    <!------------ model end ------------>
-    <!------------ The face tedection section -------------->
     <section id="faceDetection">
       <table id="table">
         <tr>
@@ -126,80 +165,108 @@
           <td>Your age</td>
         </tr>
         <tr>
-          <td>Esle:</td>
-          <td>Esle</td>
+          <td>Emotion:</td>
+          <td class="emotion"></td>
         </tr>
       </table>
       <div id="btns-video">
         <div id="videoDiv">
           <video id="video" width="600" height="500" autoplay muted></video>
+          <img
+            src="https://www.seekpng.com/png/detail/82-829301_video-camera-icon-free-download-movie-camera.png"
+            class="camera-image"
+          />
         </div>
         <div id="btnsDiv">
           <i id="startBtn" class="fas fa-play-circle"></i>
-          <i id="pauseBtn" class="fas fa-pause-circle"></i>
+          <i
+            id="pauseBtn"
+            class="fas fa-pause-circle"
+            style="display: none;"
+          ></i>
         </div>
+        <!-- <button class="button button1 turnOnCamera">Green</button> -->
       </div>
       <div id="msgDiv">
         <h2>Your Feeling</h2>
         <hr />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tenetur
-          quam assumenda consequatur asperiores vero repudiandae consequuntur et
-          qui nulla alias eos eum, ipsum optio soluta corporis commodi molestias
-          iusto.
-        </p>
-      </div>
-    </section>
-    <!------------ End of fase tedection section ----------->
-    <!------------ The face tedection section -------------->
-    <section id="mouthDetection">
-      <div id="btns-video">
-        <div id="videoDiv">
-          <video id="video2" width="600" height="500" autoplay muted></video>
-          <div class="mice-icon">
-            <i
-              class="fas fa-microphone-alt talking"
-              style="color: red; display: none;"
-            ></i>
-            <i
-              class="fas fa-microphone-alt-slash silent"
-              style="color: red; display: none;"
-            ></i>
-          </div>
+        <div class="jokeDiv">
+          <p class="lead question"></p>
+          <p class="lead answer"></p>
         </div>
       </div>
     </section>
-    <div id="btnsDiv">
-      <i id="startBtn2" class="fas fa-play-circle"></i>
-      <i id="pauseBtn2" class="fas fa-pause-circle"></i>
-    </div>
+    <!------------ The face tedection section -------------->
+    <section class="mouthDetection">
+      <div id="mouthDetection">
+        <div id="btns-video">
+          <div id="videoDiv">
+            <video id="video2" width="600" height="500" autoplay muted></video>
+            <img
+              src="https://www.seekpng.com/png/detail/82-829301_video-camera-icon-free-download-movie-camera.png"
+              class="camera-image2"
+            />
+            <div class="mice-icon">
+              <i
+                class="fas fa-microphone-alt talking"
+                style="color: #228b22; display: none;"
+              ></i>
+              <i
+                class="fas fa-microphone-alt-slash silent"
+                style="color: red; display: none;"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <img
+        src="https://banner2.cleanpng.com/20180311/auq/kisspng-webcam-scalable-vector-graphics-download-icon-grey-camera-5aa4fc2b08ca46.283421411520761899036.jpg"
+        class="button1"
+        style="width: 60px; height: 60px;"
+      /> -->
+
+      <button class="button button1 turnOnCamera2">Green</button>
+      <!--  <button class="button button2">Blue</button> -->
+
+      <div id="btnsDiv">
+        <i id="startBtn2" class="fas fa-play-circle"></i>
+        <i
+          id="pauseBtn2"
+          class="fas fa-pause-circle"
+          style="display: none;"
+        ></i>
+      </div>
+    </section>
+
     <!------------ End of fase tedection section ----------->
     <!------------ About us section --------------->
-    <section id="aboutUs">
-      <h1>About Us</h1>
-      <div class="imgDiv">
-        <img
-          src="image/emotions.jpg"
-          alt="best price img"
-          id="best-price"
-        /><br />
-      </div>
-      <div class="pDiv">
-        <p>
-          We are working on face recongnition so it can recognize facial
-          expressions, and also try to determine the age, and gender of the the
-          User being streamed on the website. Depending on the Users facial
-          expressions giphy's will be rendered suitable to the current
-          expression.
-        </p>
-        <br />
-        <p>
-          In this project we used a face recognition API(face-api.js),
-          giphy-api, javaScript, jQuery, HTML, CSS and foundation markup. Some
-          of our backrounds include Computer Science and beginner development
-          with the goal of expanding our knowledge within the realm of Full
-          Stack Development.
-        </p>
+    <section class="aboutUs">
+      <div id="aboutUs">
+        <h1>About Us</h1>
+        <div class="imgDiv">
+          <img
+            src="image/emotions.jpg"
+            alt="best price img"
+            id="best-price"
+          /><br />
+        </div>
+        <div class="pDiv">
+          <p>
+            We are working on face recongnition so it can recognize facial
+            expressions, and also try to determine the age, and gender of the
+            the User being streamed on the website. Depending on the Users
+            facial expressions giphy's will be rendered suitable to the current
+            expression.
+          </p>
+          <br />
+          <p>
+            In this project we used a face recognition API(face-api.js),
+            giphy-api, javaScript, jQuery, HTML, CSS and foundation markup. Some
+            of our backrounds include Computer Science and beginner development
+            with the goal of expanding our knowledge within the realm of Full
+            Stack Development.
+          </p>
+        </div>
       </div>
     </section>
     <!------------ End of about us ------------>
