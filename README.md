@@ -10,9 +10,11 @@
 <h2> Summary</h2>
 <ul>
   <li>HTML and CSS and Javascript documents create a face and mouth detection</li>
-  <li>This project emphasizes the use of using Javascript and Jquery</li>
-  <li>This project emphasizes the use of using Javascript and Jquery </li>
-  <li></li>
+  <li>This project emphasizes the use of Javascript and Jquery</li>
+  <li>TensorFlow.js is a library for machine learning in JavasScript</li>
+  <li>Face-api.js was incorporated on top of TensorFlow.js to solve and capture facial expressions direclty from the browser</li>
+  <li>Foundation markup was used to set the standard for our website </li>
+  <li>Fontawesome was aslo implemented to visually stimulate the users experience</li>
 </ul>
 
 <h2>This project has the following features:</h2>
@@ -27,8 +29,13 @@
 
 <h2>Psuedo code:</h2>
 <ul>
-<li></li>
-<li></li>
-<li></li>
+<li>When the first play button is clicked it will analyze the users face</li>
+<li>After 5 seconds or when the pause button is clicked it will capture the expression, rendering data</li>
+<li>The data thats retrieved is placed in the appropriate section</li>
+<li>If the redo button is hit again it will restart the process</li>
+<li>Depending on the expression captured, a joke will be displayed to the user</li>
+<li>When the second play button is hit the video will be initiated</li>
+<li>When the user talks a microphone icon will appear</li>
+<li>When silence is detected the  microphone icon will be visibly disabled(Muted)
 </ul>
 
