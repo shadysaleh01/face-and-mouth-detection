@@ -1,4 +1,4 @@
-/*------- The mouth detection section -------*/
+////////////// The face detection section ///////////////
 
 const video2 = document.querySelector('#video2');
 
@@ -19,6 +19,7 @@ Promise.all([
   $('.turnOnCamera2').click(function () {
     console.log('start');
     $('.camera-image2').fadeOut();
+    $('.turnOnCamera2').attr('style', 'box-shadow: 1px 3px 12px yellow;');
     startVideo2();
   })
 );
@@ -63,11 +64,6 @@ video2.addEventListener('play', () => {
         .withFaceExpressions();
       console.log(detections);
 
-      console.log('66');
-      console.log(detections[0].landmarks._positions[66]._y);
-      console.log('62');
-      console.log(detections[0].landmarks._positions[62]._y);
-
       const resizedDetections = faceapi.resizeResults(detections, displaySize);
       canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
       faceapi.draw.drawDetections(canvas, resizedDetections);
@@ -89,7 +85,7 @@ video2.addEventListener('play', () => {
         var maxNum = JSON.stringify(Math.max.apply(null, emptyArr));
         console.log(' hahahah-> ' + maxNum);
 
-        if (maxNum > 2.8) {
+        if (maxNum > 2.9) {
           $('.talking').attr('style', 'display: block;');
           $('.silent').attr('style', 'display: none;');
         } else {
@@ -102,6 +98,4 @@ video2.addEventListener('play', () => {
   }
 });
 
-
 ////////////// End of the detection section ////////////////
-
