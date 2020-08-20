@@ -89,32 +89,9 @@ button.orbit-previous {
   font-size: 24px;
 }
 
-@media only screen and (max-width: 890px) {
-  .orbit-container {
-    height: 500px !important;
-  }
-  .orbit-image {
-    height: 500px;
-  }
-  .mouse-scroll {
-    top: 89%;
-  }
-}
 
-@media only screen and (max-width: 664px) {
-  .orbit-container {
-    height: 350px !important;
-  }
-  .orbit-image {
-    height: 350px;
-  }
-  .orbit-caption {
-    font-size: 16px;
-  }
-  .mouse-scroll {
-    top: 85%;
-  }
-}
+
+
 
 /* Mouse scroll button on banner */
 
@@ -478,8 +455,20 @@ footer p {
 
   /* --------- End of face detection section -----------*/
 }
-
+ /* --------- Slider ----------- */
 @media only screen and (max-width: 980px) {
+  
+    .orbit-container {
+    height: 500px !important;
+  }
+  .orbit-image {
+    height: 500px;
+  }
+  .mouse-scroll {
+    top: 89%;
+  }
+   /* --------- End Slider ----------- */
+  
   /* --------- Search section ----------- */
   .imageItem {
     max-width: 12%;
@@ -506,6 +495,7 @@ footer p {
     font-size: 55px;
   }
   /*----------End of Developer section---------- */
+  
 }
 
 @media only screen and (max-width: 760px) {
@@ -581,6 +571,21 @@ footer p {
 }
 
 @media only screen and (max-width: 640px) {
+  /* --------- Slider section ----------- */
+    .orbit-container {
+    height: 350px !important;
+  }
+  .orbit-image {
+    height: 350px;
+  }
+  .orbit-caption {
+    font-size: 16px;
+  }
+  .mouse-scroll {
+    top: 85%;
+  }
+  /* --------- End Slider section ----------- */
+  
   /* --------- Search section ----------- */
   .logoImage {
     width: 145px;
