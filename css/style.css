@@ -5,13 +5,13 @@ body {
 }
 
 /*------------- header -------------*/
-header {
-  background-color: #041363;
+#header {
+  background-color: #0c72c4;
 }
 
 .top-bar,
 .top-bar ul {
-  background-color: #041363;
+  background-color: #0c72c4;
 }
 
 .menu a {
@@ -43,38 +43,77 @@ header {
 }
 /* -----------End of header ------------- */
 
-
-
 /*------------ banner section ---------------*/
 #banner {
-  height: 70vh;
+  height: auto;
   margin-top: 0rem;
   padding: 0rem;
   margin: 0rem;
   position: relative;
 }
 
-.hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('../image/face-recognition.jpg')
-      50% no-repeat;
-  background-size: cover;
-  height: 70vh;
-  text-align: center;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+button.orbit-next {
+  display: none;
 }
 
-.hero-section .hero-section-text {
+/* Hidig the slider arrow */
+button.orbit-next {
+  display: none;
+}
+
+button.orbit-previous {
+  display: none;
+}
+
+/* banner Slider */
+.orbit-container {
+  height: 700px !important;
+}
+
+.orbit-image {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  height: 650px;
+}
+
+.orbit-caption {
+  font-weight: bolder;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 1rem;
+  background-color: rgba(10, 10, 10, 0.5);
   color: #fefefe;
-  text-shadow: 1px 1px 2px #0a0a0a;
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 890px) {
+  .orbit-container {
+    height: 500px !important;
+  }
+  .orbit-image {
+    height: 500px;
+  }
+  .mouse-scroll {
+    top: 89%;
+  }
+}
+
+@media only screen and (max-width: 664px) {
+  .orbit-container {
+    height: 350px !important;
+  }
+  .orbit-image {
+    height: 350px;
+  }
+  .orbit-caption {
+    font-size: 16px;
+  }
+  .mouse-scroll {
+    top: 85%;
+  }
 }
 
 /* Mouse scroll button on banner */
@@ -134,9 +173,8 @@ header {
   justify-content: center;
   position: absolute;
   left: 50%;
-  bottom: 5%;
+  top: 85%;
 }
-/*------------- End of search section -------------*/
 /*------------- Face detection section -------------*/
 #faceDetection {
   background-color: #fff;
@@ -166,16 +204,16 @@ header {
   align-items: center;
   padding-bottom: 20px;
   width: 100%;
+  position: relative;
 }
 #pauseBtn {
   color: rgb(185, 7, 7);
   font-size: 50px;
-  margin-left: 20px;
 }
 #startBtn {
   color: green;
   font-size: 50px;
-  margin-right: 20px;
+  position: absolute;
 }
 #table {
   width: 350px;
@@ -213,6 +251,31 @@ canvas {
   justify-content: center;
   align-items: center;
 }
+
+div#videoDiv {
+  min-height: 450px;
+  height: auto;
+}
+
+img.camera-image {
+  width: 600px;
+  height: 442px;
+}
+#video {
+  position: relative;
+}
+
+.camera-image {
+  position: absolute;
+}
+
+#btns-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
 /*------------ End of Face detection section ------------*/
 /*------------ Mouth detection section ------------*/
 section.mouthDetection {
@@ -245,13 +308,23 @@ i.fas.fa-microphone-alt-slash.silent {
 #pauseBtn2 {
   color: rgb(185, 7, 7);
   font-size: 50px;
-  margin-left: 20px;
 }
 
 #startBtn2 {
   color: green;
   font-size: 50px;
-  margin-right: 20px;
+}
+
+img.camera-image2 {
+  width: 600px;
+  height: 442px;
+}
+#video2 {
+  position: relative;
+}
+
+.camera-image2 {
+  position: absolute;
 }
 
 /*------------ End of Mouth detection section ------------*/
@@ -403,12 +476,10 @@ footer p {
     margin-bottom: 20px;
   }
 
-  
   /* --------- End of face detection section -----------*/
 }
 
 @media only screen and (max-width: 980px) {
-
   /* --------- Search section ----------- */
   .imageItem {
     max-width: 12%;

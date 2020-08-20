@@ -15,9 +15,15 @@ Promise.all([
   faceapi.nets.faceExpressionNet.loadFromUri(
     'https://moelak.oudemo.com/_resources/models'
   ),
-]).then(startVideo);
+]).then(
+  $('.turnOnCamera2').click(function () {
+    console.log('start');
+    $('.camera-image2').fadeOut();
+    startVideo2();
+  })
+);
 
-function startVideo() {
+function startVideo2() {
   navigator.getUserMedia(
     { video: {} },
     stream => (video2.srcObject = stream),
@@ -33,15 +39,19 @@ video2.addEventListener('play', () => {
 
   $('#startBtn2').click(function () {
     console.log('click....asf');
-    run();
+    $('#startBtn2').hide();
+    $('#pauseBtn2').show();
+    run2();
   });
 
   // setTimeout(run, 2000);
   var emptyArr = [];
 
-  function run() {
+  function run2() {
     $('#pauseBtn2').click(function () {
       console.log('click....');
+      $('#pauseBtn2').hide();
+      $('#startBtn2').show();
       clearInterval(interval);
     });
     var timesRun = 0;
@@ -92,4 +102,6 @@ video2.addEventListener('play', () => {
   }
 });
 
-/*------- End of the mouth detection section -------*/
+
+////////////// End of the detection section ////////////////
+

@@ -1,230 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Face Detection</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .button {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Face Detection</title>
-  <link rel="stylesheet" href="css/foundation.css" />
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+      .button1 {
+        background-color: #4caf50;
+      } /* Green */
+      .button2 {
+        background-color: #008cba;
+      } /* Blue */
+    </style>
+  </head>
 
-<body>
-  <!----------- The header  ------------->
-  <header id="header">
-    <nav class="sticky" data-sticky data-options="marginTop:0;" style="z-index: 2;">
-      <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
-        <button class="menu-icon" type="button" data-toggle></button>
-        <div class="title-bar-title">Menu</div>
-      </div>
+  <body>
+    <!----------- The header  ------------->
+    <header id="header">
+      <nav
+        class="sticky"
+        data-sticky
+        data-options="marginTop:0;"
+        style="z-index: 2;"
+      >
+        <div
+          class="title-bar"
+          data-responsive-toggle="example-animated-menu"
+          data-hide-for="medium"
+        >
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
 
-      <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
-        <div class="top-bar-left">
-          <span class="title-bar-title" id="logo"><img class="logoImage" src="./image/best-price-2.png" /></span>
+        <div
+          class="top-bar"
+          id="example-animated-menu"
+          data-animate="hinge-in-from-top spin-out"
+        >
+          <div class="top-bar-left">
+            <span class="title-bar-title" id="logo">
+              <img width="200px" class="logoImage" src="" />
+            </span>
 
-          <ul class="dropdown menu float-right" data-dropdown-menu>
-            <li>
-              <a href="#header"><i class="fa fa-home"></i>Home</a>
+            <ul class="dropdown menu float-right" data-dropdown-menu>
+              <li>
+                <a href="#header"><i class="fa fa-home"></i>Home</a>
+              </li>
+              <li>
+                <a href="#faceDetection"><i class="fa fa-search"></i>Search</a>
+              </li>
+              <li>
+                <a href="#aboutUs"
+                  ><i class="fa fa-address-card"></i>About us</a
+                >
+              </li>
+              <li>
+                <a href="#developer"><i class="fa fa-laptop"></i>Developers</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!------------ End of header ----------->
+
+    <!------------ Banner section ----------->
+    <section id="banner">
+      <div
+        class="orbit"
+        role="region"
+        aria-label="Favorite Space Pictures"
+        data-orbit
+        data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;"
+      >
+        <div class="orbit-wrapper">
+          <div class="orbit-controls">
+            <button class="orbit-previous">
+              <span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;
+            </button>
+            <button class="orbit-next">
+              <span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;
+            </button>
+          </div>
+          <ul class="orbit-container">
+            <li class="is-active orbit-slide">
+              <figure class="orbit-figure">
+                <img
+                  class="orbit-image"
+                  src="../image/face-recognition.jpg"
+                  alt="Space"
+                />
+                <figcaption class="orbit-caption">Face Detection</figcaption>
+              </figure>
             </li>
-            <li>
-              <a href="#faceDetection"><i class="fa fas fa-brain"></i>AI</a>
+            <li class="orbit-slide">
+              <figure class="orbit-figure">
+                <img
+                  class="orbit-image"
+                  src="https://analyticsindiamag.com/wp-content/uploads/2020/04/Learn-Facial-Recognition-scaled.jpg"
+                  alt="Space"
+                />
+                <figcaption class="orbit-caption">Face Landmark 68</figcaption>
+              </figure>
             </li>
-            <li>
-              <a href="#aboutUs"><i class="fa fa-address-card"></i>About us</a>
-            </li>
-            <li>
-              <a href="#developer"><i class="fa fa-laptop"></i>Developers</a>
+            <li class="orbit-slide">
+              <figure class="orbit-figure">
+                <img
+                  class="orbit-image"
+                  src="https://miro.medium.com/max/896/1*MnbUSSXG1IDS9mXC0H8cKQ.png"
+                  alt="Space"
+                />
+                <figcaption class="orbit-caption">Face Recognition</figcaption>
+              </figure>
             </li>
           </ul>
+          <div class="mouse-scroll fade-in">
+            <a href="#faceDetection">
+              <span class="scroll-icon">
+                <span class="scroll-icon__dot"></span>
+              </span>
+            </a>
+          </div>
         </div>
       </div>
-    </nav>
-  </header>
-  <!------------ End of header ----------->
+    </section>
+    <!------------ End of banner section ------------>
 
-  <!------------ Banner section ----------->
-  <section id="banner">
-    <div class="hero-section">
-      <div class="hero-section-text">
-        <h2>Face Detection</h2>
-      </div>
-    </div>
-    <div class="mouse-scroll fade-in">
-      <a href="#faceDetection">
-        <span class="scroll-icon">
-          <span class="scroll-icon__dot"></span>
-        </span>
-      </a>
-    </div>
-  </section>
-  <!------------ End of banner section ------------>
-
-  <!------------ The face tedection section -------------->
-  <section id="faceDetection">
-    <table id="table">
-      <tr>
-        <th>Anything</th>
-        <th>Anything</th>
-      </tr>
-      <tr>
-        <td>Gender:</td>
-        <td>Male/Female</td>
-      </tr>
-      <tr>
-        <td>Age:</td>
-        <td>Your age</td>
-      </tr>
-      <tr>
-        <td>Esle:</td>
-        <td>Esle</td>
-      </tr>
-    </table>
-    <div id="btns-video">
-      <div id="videoDiv">
-        <video id="video" width="600" height="500" autoplay muted></video>
-      </div>
-      <div id="btnsDiv">
-        <i id="startBtn" class="fas fa-play-circle"></i>
-        <i id="pauseBtn" class="fas fa-pause-circle"></i>
-      </div>
-    </div>
-    <div id="msgDiv">
-      <h2>Your Feeling</h2>
-      <hr />
-      <p><button class="button button1">Click me for a modal</button></p>
-      <div class="jokeDiv">
-        <p class="lead question"></p>
-        <p class="lead answer"></p>
-      </div>
-    </div>
-  </section>
-  <!------------ End of fase tedection section ----------->
-  <!------------ The face tedection section -------------->
-
-  <section class="mouthDetection">
-    <div id="mouthDetection">
+    <section id="faceDetection">
+      <table id="table">
+        <tr>
+          <th>Anything</th>
+          <th>Anything</th>
+        </tr>
+        <tr>
+          <td>Gender:</td>
+          <td>Male/Female</td>
+        </tr>
+        <tr>
+          <td>Age:</td>
+          <td>Your age</td>
+        </tr>
+        <tr>
+          <td>Emotion:</td>
+          <td class="emotion"></td>
+        </tr>
+      </table>
       <div id="btns-video">
         <div id="videoDiv">
-          <video id="video2" width="600" height="500" autoplay muted></video>
-          <div class="mice-icon">
-            <i class="fas fa-microphone-alt talking" style="color: red; display: none;"></i>
-            <i class="fas fa-microphone-alt-slash silent" style="color: red; display: none;"></i>
-          </div>
+          <video id="video" width="600" height="500" autoplay muted></video>
+          <img
+            src="https://www.seekpng.com/png/detail/82-829301_video-camera-icon-free-download-movie-camera.png"
+            class="camera-image"
+          />
+        </div>
+        <div id="btnsDiv">
+          <i id="startBtn" class="fas fa-play-circle"></i>
+          <i
+            id="pauseBtn"
+            class="fas fa-pause-circle"
+            style="display: none;"
+          ></i>
+        </div>
+        <!-- <button class="button button1 turnOnCamera">Green</button> -->
+      </div>
+      <div id="msgDiv">
+        <h2>Your Feeling</h2>
+        <hr />
+        <div class="jokeDiv">
+          <p class="lead question"></p>
+          <p class="lead answer"></p>
         </div>
       </div>
-    </div>
-    <div id="btnsDiv">
-      <i id="startBtn2" class="fas fa-play-circle"></i>
-      <i id="pauseBtn2" class="fas fa-pause-circle"></i>
-    </div>
-  </section>
-  <!------------ End of fase tedection section ----------->
-  <!------------ About us section --------------->
-  <section class="aboutUs">
-    <div id="aboutUs">
-      <h1>About Us</h1>
-      <div class="imgDiv">
-        <img src="image/emotions.jpg" alt="best price img" id="best-price" /><br />
-      </div>
-      <div class="pDiv">
-        <p>
-          We are working on face recongnition so it can recognize facial
-          expressions, and also try to determine the age, and gender of the
-          the User being streamed on the website. Depending on the Users
-          facial expressions giphy's will be rendered suitable to the current
-          expression.
-        </p>
-        <br />
-        <p>
-          In this project we used a face recognition API(face-api.js),
-          giphy-api, javaScript, jQuery, HTML, CSS and foundation markup. Some
-          of our backrounds include Computer Science and beginner development
-          with the goal of expanding our knowledge within the realm of Full
-          Stack Development.
-        </p>
-      </div>
-    </div>
-  </section>
-  <!------------ End of about us ------------>
-
-  <!------------ Developers section ------------>
-  <section id="developer">
-    <div class="grid-container" id="grid-container">
-      <h1>MEET THE TEAM</h1>
-      <div class="grid-x grid-margin-x small-up-2 medium-up-3">
-        <!-- The first card "Moe" -->
-        <div class="cell">
-          <div class="card">
-            <img src="image/Moe.PNG" alt="Photo of the developer Mohamed laknhour" />
-            <div class="card-section">
-              <h4>Moe Laknahour</h4>
-              <div class="iDiv">
-                <a href="https://github.com/moelak" alt="Mohamed laknhour Github account"><i class="fab fa-github"
-                    href="https://github.com/moelak"></i></a>
-                <a href="https://www.linkedin.com/in/mohammad-laknahour-24279b109/"
-                  alt="Mohamed laknhour linkedin account"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:m.laknahour1990@gmail.com" alt="Send an email to Mohamed laknhour"><i
-                    class="far fa-envelope"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- The second card "Shady" -->
-        <div class="cell">
-          <div class="card">
-            <img src="image/Shady.jpg" alt="Photo of the developer Shady Saleh" />
-            <div class="card-section">
-              <h4>Shady Saleh</h4>
-              <div class="iDiv">
-                <a href="https://github.com/shadysaleh01" alt="Shady Saleh Github account"><i
-                    class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/shady-saleh01/" alt="Shady Saleh linkedin account"><i
-                    class="fab fa-linkedin"></i></a>
-                <a href="mailto:shadysaleh01@gmail.com" alt="Send an email to Shady Saleh"><i
-                    class="far fa-envelope"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- The third card "Raul" -->
-        <div class="cell">
-          <div class="card">
-            <img src="image/Raul.jpg" alt="Photo of the developer Raul Oropesa" />
-            <div class="card-section">
-              <h4>Raul Oropesa</h4>
-              <div class="iDiv">
-                <a href="#" alt="Raul Oropesa Github account"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/raul-oropesa-ab1549172" alt="Raul Oropesa linkedin account"><i
-                    class="fab fa-linkedin"></i></a>
-                <a href="mailto:alexoropesa1982@yahoo.com" alt="Send an email to Raul Oropesa"><i
-                    class="far fa-envelope"></i></a>
-              </div>
+    </section>
+    <!------------ The face tedection section -------------->
+    <section class="mouthDetection">
+      <div id="mouthDetection">
+        <div id="btns-video">
+          <div id="videoDiv">
+            <video id="video2" width="600" height="500" autoplay muted></video>
+            <img
+              src="https://www.seekpng.com/png/detail/82-829301_video-camera-icon-free-download-movie-camera.png"
+              class="camera-image2"
+            />
+            <div class="mice-icon">
+              <i
+                class="fas fa-microphone-alt talking"
+                style="color: #228b22; display: none;"
+              ></i>
+              <i
+                class="fas fa-microphone-alt-slash silent"
+                style="color: red; display: none;"
+              ></i>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!------------ End of developer section -------------->
+      <!-- <img
+        src="https://banner2.cleanpng.com/20180311/auq/kisspng-webcam-scalable-vector-graphics-download-icon-grey-camera-5aa4fc2b08ca46.283421411520761899036.jpg"
+        class="button1"
+        style="width: 60px; height: 60px;"
+      /> -->
 
-  <!------------ Footer section ------------->
-  <footer>
-    <p>Price-Right ©2020. All rights reserved</p>
-    <!----- The scroll button that on the screen ----->
-    <a href="#header" id="go-up"><i class="fas fa-arrow-alt-circle-up"></i></a>
-  </footer>
-  <!------------ End footer section ------------>
+      <button class="button button1 turnOnCamera2">Green</button>
+      <!--  <button class="button button2">Blue</button> -->
 
-  <script src="js/vendor/jquery.js"></script>
-  <script src="js/vendor/what-input.js"></script>
-  <script src="js/vendor/foundation.min.js"></script>
-  <script src="js/vendor/app.js"></script>
-  <script src="js/scrolling.js"></script>
-  <script src="js/face-api.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/mouthDetection.js"></script>
-</body>
+      <div id="btnsDiv">
+        <i id="startBtn2" class="fas fa-play-circle"></i>
+        <i
+          id="pauseBtn2"
+          class="fas fa-pause-circle"
+          style="display: none;"
+        ></i>
+      </div>
+    </section>
 
+    <!------------ End of fase tedection section ----------->
+    <!------------ About us section --------------->
+    <section class="aboutUs">
+      <div id="aboutUs">
+        <h1>About Us</h1>
+        <div class="imgDiv">
+          <img
+            src="image/emotions.jpg"
+            alt="best price img"
+            id="best-price"
+          /><br />
+        </div>
+        <div class="pDiv">
+          <p>
+            We are working on face recongnition so it can recognize facial
+            expressions, and also try to determine the age, and gender of the
+            the User being streamed on the website. Depending on the Users
+            facial expressions giphy's will be rendered suitable to the current
+            expression.
+          </p>
+          <br />
+          <p>
+            In this project we used a face recognition API(face-api.js),
+            giphy-api, javaScript, jQuery, HTML, CSS and foundation markup. Some
+            of our backrounds include Computer Science and beginner development
+            with the goal of expanding our knowledge within the realm of Full
+            Stack Development.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!------------ End of about us ------------>
+
+    <!------------ Developers section ------------>
+    <section id="developer">
+      <div class="grid-container" id="grid-container">
+        <h1>MEET THE TEAM</h1>
+        <div class="grid-x grid-margin-x small-up-2 medium-up-3">
+          <!-- The first card "Moe" -->
+          <div class="cell">
+            <div class="card">
+              <img
+                src="image/Moe.PNG"
+                alt="Photo of the developer Mohamed laknhour"
+              />
+              <div class="card-section">
+                <h4>Moe Laknahour</h4>
+                <div class="iDiv">
+                  <a
+                    href="https://github.com/moelak"
+                    alt="Mohamed laknhour Github account"
+                    ><i
+                      class="fab fa-github"
+                      href="https://github.com/moelak"
+                    ></i
+                  ></a>
+                  <a
+                    href="https://www.linkedin.com/in/mohammad-laknahour-24279b109/"
+                    alt="Mohamed laknhour linkedin account"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+                  <a
+                    href="mailto:m.laknahour1990@gmail.com"
+                    alt="Send an email to Mohamed laknhour"
+                    ><i class="far fa-envelope"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- The second card "Shady" -->
+          <div class="cell">
+            <div class="card">
+              <img
+                src="image/Shady.jpg"
+                alt="Photo of the developer Shady Saleh"
+              />
+              <div class="card-section">
+                <h4>Shady Saleh</h4>
+                <div class="iDiv">
+                  <a
+                    href="https://github.com/shadysaleh01"
+                    alt="Shady Saleh Github account"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                  <a
+                    href="https://www.linkedin.com/in/shady-saleh01/"
+                    alt="Shady Saleh linkedin account"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+                  <a
+                    href="mailto:shadysaleh01@gmail.com"
+                    alt="Send an email to Shady Saleh"
+                    ><i class="far fa-envelope"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- The third card "Raul" -->
+          <div class="cell">
+            <div class="card">
+              <img
+                src="image/Raul.jpg"
+                alt="Photo of the developer Raul Oropesa"
+              />
+              <div class="card-section">
+                <h4>Raul Oropesa</h4>
+                <div class="iDiv">
+                  <a href="#" alt="Raul Oropesa Github account"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                  <a
+                    href="https://www.linkedin.com/in/raul-oropesa-ab1549172"
+                    alt="Raul Oropesa linkedin account"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+                  <a
+                    href="mailto:alexoropesa1982@yahoo.com"
+                    alt="Send an email to Raul Oropesa"
+                    ><i class="far fa-envelope"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------------ End of developer section -------------->
+
+    <!------------ Footer section ------------->
+    <footer>
+      <p>Price-Right ©2020. All rights reserved</p>
+      <!----- The scroll button that on the screen ----->
+      <a href="#header" id="go-up"
+        ><i class="fas fa-arrow-alt-circle-up"></i
+      ></a>
+    </footer>
+    <!------------ End footer section ------------>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script src="js/vendor/app.js"></script>
+    <script src="js/scrolling.js"></script>
+    <script src="js/face-api.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/mouthDetection.js"></script>
+  </body>
 </html>
