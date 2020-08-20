@@ -1,4 +1,4 @@
-////////////// The face detection section ///////////////
+/*------- The mouth detection section -------*/
 
 const video2 = document.querySelector('#video2');
 
@@ -102,4 +102,6 @@ video2.addEventListener('play', () => {
   }
 });
 
+
 ////////////// End of the detection section ////////////////
+
