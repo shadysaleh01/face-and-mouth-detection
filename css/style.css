@@ -198,14 +198,17 @@ button.orbit-previous {
 #pauseBtn {
   color: rgb(187, 1, 1);
   font-size: 50px;
+  cursor: pointer;
 }
 #redo  {
   font-size:50px;
+  cursor: pointer;
 }
 #startBtn {
   color: green;
   font-size: 50px;
   position: absolute;
+  cursor: pointer;
 }
 #table {
   width: 350px;
@@ -338,8 +341,8 @@ img.camera-image2 {
 
 img.button1.turnOnCamera2 {
   position: absolute;
-  left: 92%;
-  bottom: 86%;
+  left: 76.5%;
+  bottom: 75%;
   cursor: pointer;
 }
 #videoDiv2 {
