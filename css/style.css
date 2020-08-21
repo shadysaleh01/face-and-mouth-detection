@@ -276,7 +276,7 @@ img.camera-image {
 section.mouthDetection {
   background-color: rgb(243 240 239);
 }
-#btns-video-2 h1{
+.header-mouth{
   width: 100%;
   text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
