@@ -7,17 +7,21 @@ body {
 /*------------- header -------------*/
 #header {
   background-color: #0c72c4;
+  padding: 0;
+  margin: 0;
 }
 
 .top-bar,
 .top-bar ul {
   background-color: #0c72c4;
+  padding: 0;
 }
 
 .menu a {
-  font-size: 18px;
+  font-size: 20px;
   color: #fefefe;
   transition: color 0.5s ease;
+  margin:9px
 }
 
 .menu a:hover {
@@ -27,6 +31,11 @@ body {
 
 #logo {
   color: white;
+}
+#aiLogo {
+  margin-left: 40px;
+  height: 70px;
+  width: 150px;
 }
 
 .fa {
@@ -162,9 +171,16 @@ button.orbit-previous {
 
 #btns-video {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+#btns-video h1{
+  width: 100%;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #e49401;
 }
 #videoDiv {
   display: flex;
@@ -175,13 +191,16 @@ button.orbit-previous {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 20px;
+  padding: 40px;
   width: 100%;
   position: relative;
 }
 #pauseBtn {
-  color: rgb(185, 7, 7);
+  color: rgb(187, 1, 1);
   font-size: 50px;
+}
+#redo  {
+  font-size:50px;
 }
 #startBtn {
   color: green;
