@@ -143,17 +143,17 @@ video.addEventListener('play', () => {
           });
         }
         else if ('happy' == mostFrequent) {
-          var happyTxt = "Get out of here!"
+          var happyTxt = "Get out of here! ;)"
           $('.question').append(happyTxt);
           $('.answer').text("");
         }
         else if ('disgusting' == mostFrequent) {
-          var disgustingTxt = "Hey what's wrong with your face"
+          var disgustingTxt = "Hey, what's wrong with your face"
           $('.question').append(disgustingTxt);
           $('.answer').text("");
         }
         else if ('surprised' == mostFrequent) {
-          var surprisedTxt = "Dude, why you're surpris"
+          var surprisedTxt = "Dude, why you're surprised!!!"
           console.log("surprisedTxt hhhhhhhhhhhh")
           $('.question').append(surprisedTxt);
           $('.answer').text("");
