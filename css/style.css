@@ -340,10 +340,10 @@ img.camera-image2 {
 }
 
 img.button1.turnOnCamera2 {
-  position: absolute;
-  left: 76.5%;
-  bottom: 75%;
-  cursor: pointer;
+    position: absolute;
+    left: 92.5%;
+    bottom: 86%;
+    cursor: pointer;
 }
 #videoDiv2 {
   display: flex;
