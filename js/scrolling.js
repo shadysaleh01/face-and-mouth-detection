@@ -18,11 +18,11 @@ $('nav a').on('click', function (e) {
 //////////////// End of header //////////////
 /////////////// The banner section ////////////////
 // the start scroll button
-$('#banner a').on('click', function (e) {
+$('.scroll-icon').on('click', function (e) {
   // Run a scroll animation to the position of the element which has the same id like the href value.
   $('html, body').animate(
     {
-      scrollTop: $('#searchItem').offset().top,
+      scrollTop: $('#faceDetection').offset().top,
     },
     '300'
   );
