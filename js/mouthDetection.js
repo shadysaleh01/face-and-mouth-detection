@@ -42,6 +42,7 @@ video2.addEventListener('play', () => {
     console.log('click....asf');
     $('#startBtn2').hide();
     $('#pauseBtn2').show();
+     $('canvas').show();
     run2();
   });
 
@@ -53,6 +54,7 @@ video2.addEventListener('play', () => {
       console.log('click....');
       $('#pauseBtn2').hide();
       $('#startBtn2').show();
+       $('canvas').hide();
       clearInterval(interval);
     });
     var timesRun = 0;
