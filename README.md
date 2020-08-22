@@ -1,6 +1,4 @@
 <h1>AI Face & Mouth Detection</h1>
-<img src="" alt="https://moelak.github.io/face-and-mouth-detection/image/face-recognition.jpg">
-
 <ul>
   <li><a href="https://github.com/moelak/price-checker">Face-Detection Github</a></li>
   <li><a href="https://moelak.github.io/face-and-mouth-detection/">Face-Detection Github IO</a></li>
